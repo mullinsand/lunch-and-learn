@@ -8,11 +8,13 @@ RSpec.describe EdamamFacade do
         @recipes_list = EdamamFacade.recipes_by(country)
       end
     end
+    
     it 'returns a list of 10 recipe objects' do
       expect(@recipes_list).to be_an(Array)
       expect(@recipes_list.length).to eq(10)
       expect(@recipes_list.first).to be_a(Recipe)
     end
+
     context 'no search results' do
       it 'returns an empty array' do
         country = 'Uranus'
