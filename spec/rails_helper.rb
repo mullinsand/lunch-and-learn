@@ -3,6 +3,7 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require 'simplecov'
 SimpleCov.start 'rails'
+SimpleCov.add_filter ['config', 'channels', 'jobs', 'mailers']
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
@@ -22,7 +23,7 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -35,7 +36,7 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
+  config.include RequestSpecHelper, type: :request
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -70,4 +71,18 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+VCR.configure do |config|
+  config.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data("<unsplash_key>") { ENV['UNSPLASH_KEY']}
+  config.filter_sensitive_data("<unsplash_secret>") { ENV['UNSPLASH_SECRET']}
+  config.filter_sensitive_data("<youtube_key>") { ENV['YOUTUBE_KEY']}
+  config.filter_sensitive_data("<edamam_id>") { ENV['EDAMAM_ID']}
+  config.filter_sensitive_data("<edamam_key>") { ENV['EDAMAM_KEY']}
 end
