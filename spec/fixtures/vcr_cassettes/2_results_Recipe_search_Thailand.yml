@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edamam.com/api/recipes/v2?app_id=<edamam_id>&app_key=<edamam_key>&field=image&q=thailand&type=public
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 11 Nov 2022 20:28:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      X-Served-By:
+      - ip-10-0-1-125.ec2.internal/10.0.1.125
+      Vary:
+      - accept-encoding
+      Strict-Transport-Security:
+      - max-age=15552001
+      X-Request-Id:
+      - 8d0cc06a7caade8a35b9ce67d5fb4871
+    body:
+      encoding: UTF-8
+      string: '{"from":1,"to":20,"count":192,"_links":{"next":{"href":"https://api.edamam.com/api/recipes/v2?q=thailand&app_key=<edamam_key>&field=label&field=url&field=image&_cont=CHcVQBtNNQphDmgVQ3tAEX4BYVRtAgYDRWRCBGYUYlxxBwsVX3dIADZHYAZ7VgIHFWQRVTdFagZxVVcBRGVABmUQZ1xyVRFqX3cWQT1OcV9xBB8VADQWVhFCPwoxXVZEITQeVDcBaR4-SQ%3D%3D&type=public&app_id=<edamam_id>","title":"Next
+        page"}},"hits":[{"recipe":{"label":"THAI
+        COCONUT CREMES","image":"https://edamam-product-images.s3.amazonaws.com/web-img/8cd/8cd5ec2ff6310a088761956e4e571219.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFUBzy4XLDCnNz3LiA8dj5IUJnrAR4RGhVitiTQ7gI8WAiEApvFmmlx1TQJa5gvNx8B0kAtVuf%2Bb2R5X8M%2BxzIVVHdcq1QQIlf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDBNWcNrojbmasFW6%2BSqpBMT6L%2Fl54z5kOnOhGNUwsbrhcuBtWh8IO8JIxsErTX81CCYeSfdOf2WSO9W2gvJVmFbCq5wByR5SBbUazO1QR0SOhg%2FegoQG8JAmOKklhEg7kpUczcuWutULIEe%2FmRMTRoYtEZJNyRxHMnRG9ydpThHGFryxWFqhR%2F5fOTPb73kha8doaHpvhLVJqzOit88Vg3SUPfZGa2n9FpDT8Jh0%2BVMZdEbXrc%2BO9BNDfkC09XFX8pTLdV94nFy4%2Bmta8qyOZolf7YnVoGqymMUPJFoQ4CF9UHHqNJVUWlu5Ap5gXxa4B81MevGuO%2BKlSqdL5lDxtlqFeyoyVxu%2F8mYwvA5PXH5v%2FwLf3QlUafM5Uj0we63l9wDDuc%2F3cuyNi4wSVB5x0K1PZjmber%2FjX5OmMf7VI7MkqKPY9Bd%2FF2a2KwtaEnHbVcu9EvSj8E4c1%2F%2BcIz0%2BcBTLejfPfvC4ahvIPh5EuAXKJPApISm0jpdaUZDbLYZoSbl7x9MjQRBsY%2FM7TfKhjJH7iE3%2FXyQhDGeA3cu3kTF42XGFvssJVgR78GD6dHnn07aw44nK8D9BrhexLYZ1L4AXJAgAUqAD2NDzxWcGYdIkJELCTs9Io6fBgPYLesLDmqu8NO5spLBpv4TPRR5WOjOCLhG%2F1LDDaw28ebUDt9%2FSFrpUZxVOHKyCLTks0pZIed9nAD%2BapR1RaGAiW5OfSnjMITg%2FQgvZKsnRYrGnkbzIHoSn63JTTwQw49O6mwY6qQHsXkqZk8DYDNR7LRaBa49%2BdYX2keIi%2FL4OSwK6ExdckF1AAiEudapC%2FtPVqEtWAWuU%2Bg1W0LHVRmSxr%2Bcox6KMRx%2BYL5nTwKUuwxunoYL%2B6oh3LGkXJ3lCoWSrn%2B0ijGvlNqPaVvbp96QV1hW7xdroS31s09tyrheWh%2B8NcGrV7aez6BXOtb4henpylYIR%2BJz%2BSKDzySKVmeSa%2Bw4EsMkGJDzj7e5YFaKc&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221111T202837Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFE3AACSJQ%2F20221111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=66e325f92e90fdc4509f9ce08ca441ab4e034529aa1c1132e7f8ffdc9c143c21","url":"https://food52.com/recipes/37220-thai-coconut-cremes"},"_links":{"self":{"href":"https://api.edamam.com/api/recipes/v2/096a1c7ff1832055d9b4735653859926?type=public&app_id=<edamam_id>&app_key=<edamam_key>","title":"Self"}}},{"recipe":{"label":"Sriracha","image":"https://edamam-product-images.s3.amazonaws.com/web-img/cb5/cb5a93a9d2592f7aa5233c85f3728c15.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFUBzy4XLDCnNz3LiA8dj5IUJnrAR4RGhVitiTQ7gI8WAiEApvFmmlx1TQJa5gvNx8B0kAtVuf%2Bb2R5X8M%2BxzIVVHdcq1QQIlf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgwxODcwMTcxNTA5ODYiDBNWcNrojbmasFW6%2BSqpBMT6L%2Fl54z5kOnOhGNUwsbrhcuBtWh8IO8JIxsErTX81CCYeSfdOf2WSO9W2gvJVmFbCq5wByR5SBbUazO1QR0SOhg%2FegoQG8JAmOKklhEg7kpUczcuWutULIEe%2FmRMTRoYtEZJNyRxHMnRG9ydpThHGFryxWFqhR%2F5fOTPb73kha8doaHpvhLVJqzOit88Vg3SUPfZGa2n9FpDT8Jh0%2BVMZdEbXrc%2BO9BNDfkC09XFX8pTLdV94nFy4%2Bmta8qyOZolf7YnVoGqymMUPJFoQ4CF9UHHqNJVUWlu5Ap5gXxa4B81MevGuO%2BKlSqdL5lDxtlqFeyoyVxu%2F8mYwvA5PXH5v%2FwLf3QlUafM5Uj0we63l9wDDuc%2F3cuyNi4wSVB5x0K1PZjmber%2FjX5OmMf7VI7MkqKPY9Bd%2FF2a2KwtaEnHbVcu9EvSj8E4c1%2F%2BcIz0%2BcBTLejfPfvC4ahvIPh5EuAXKJPApISm0jpdaUZDbLYZoSbl7x9MjQRBsY%2FM7TfKhjJH7iE3%2FXyQhDGeA3cu3kTF42XGFvssJVgR78GD6dHnn07aw44nK8D9BrhexLYZ1L4AXJAgAUqAD2NDzxWcGYdIkJELCTs9Io6fBgPYLesLDmqu8NO5spLBpv4TPRR5WOjOCLhG%2F1LDDaw28ebUDt9%2FSFrpUZxVOHKyCLTks0pZIed9nAD%2BapR1RaGAiW5OfSnjMITg%2FQgvZKsnRYrGnkbzIHoSn63JTTwQw49O6mwY6qQHsXkqZk8DYDNR7LRaBa49%2BdYX2keIi%2FL4OSwK6ExdckF1AAiEudapC%2FtPVqEtWAWuU%2Bg1W0LHVRmSxr%2Bcox6KMRx%2BYL5nTwKUuwxunoYL%2B6oh3LGkXJ3lCoWSrn%2B0ijGvlNqPaVvbp96QV1hW7xdroS31s09tyrheWh%2B8NcGrV7aez6BXOtb4henpylYIR%2BJz%2BSKDzySKVmeSa%2Bw4EsMkGJDzj7e5YFaKc&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221111T202837Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFE3AACSJQ%2F20221111%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=35a1010a52985e8c6f22f17c101e9444b1ab489e83bb6ec70130fac39b1c1c47","url":"http://www.jamieoliver.com/recipes/vegetables-recipes/sriracha/"},"_links":{"self":{"href":"https://api.edamam.com/api/recipes/v2/2a008b18215ea82745b2079bcc29c8d0?type=public&app_id=<edamam_id>&app_key=<edamam_key>","title":"Self"}}}]}'
+  recorded_at: Fri, 11 Nov 2022 20:28:37 GMT
+recorded_with: VCR 6.1.0

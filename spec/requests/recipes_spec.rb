@@ -33,7 +33,14 @@ RSpec.describe 'GET /api/v1/recipes' do
         end
       end
       context 'there are fewer than 10 recipes' do
-
+        it 'returns at the number of recipes found from that country' do
+          @country = 'thailand'
+          VCR.use_cassette('2_results_Recipe_search_Thailand') do
+            get "/api/v1/recipes?country=#{@country}"
+          end
+          @recipe_response = json
+          expect(@recipe_response[:data].length).to eq(2)
+        end
       end
 
       context 'there are no results' do
@@ -50,7 +57,14 @@ RSpec.describe 'GET /api/v1/recipes' do
 
     context 'when a country param is not passed in' do
       it 'picks a random country and returns recipes for that country' do
-
+        allow(RestCountriesFacade).to receive(:random_country).and_return('thailand')
+        VCR.use_cassette('Recipe_search_Thailand') do
+          get "/api/v1/recipes"
+        end
+        @recipes_list = json
+        expect(response).to be_successful
+        expect(@recipes_list[:data]).to be_an(Array)
+        expect(@recipes_list[:data].first[:country]).to eq(@country)
       end
     end
   end
