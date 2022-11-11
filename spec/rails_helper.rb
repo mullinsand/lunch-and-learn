@@ -71,3 +71,17 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+VCR.configure do |config|
+  config.before_record do |i|
+    i.response.body.force_encoding('UTF-8')
+  end
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data("<unsplash_key>") { ENV['UNSPLASH_KEY']}
+  config.filter_sensitive_data("<unsplash_secret>") { ENV['UNSPLASH_SECRET']}
+  config.filter_sensitive_data("<youtube_key>") { ENV['YOUTUBE_KEY']}
+  config.filter_sensitive_data("<edamam_id>") { ENV['EDAMAM_ID']}
+  config.filter_sensitive_data("<edamam_key>") { ENV['EDAMAM_KEY']}
+end
