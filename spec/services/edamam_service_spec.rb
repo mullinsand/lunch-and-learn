@@ -26,5 +26,15 @@ RSpec.describe EdamamService do
       recipe = @response[:hits].first[:recipe]
       expect(recipe.keys.length).to eq(3)
     end
+
+    context 'no search results' do
+      it 'has an empty array for the hits key' do
+        country = 'Uranus'
+        VCR.use_cassette('No_Recipe_search_Uranus') do
+          @recipes_list = EdamamService.recipes_by(country)
+        end
+        expect(@recipes_list[:hits]).to eq([])
+      end
+    end
   end
 end
