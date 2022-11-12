@@ -1,13 +1,13 @@
 class YoutubeService
   
   def self.conn
-    Faraday.new('https://www.googleapis.com/youtube/v3/search') do |f|
+    Faraday.new('https://www.googleapis.com') do |f|
       f.params[:key] = ENV['YOUTUBE_KEY']
     end
   end
   
   def self.video_about(country)
-    response = conn.get do |f|
+    response = conn.get('/youtube/v3/search') do |f|
       f.params[:q] = country
       f.params[:part] = 'snippet'
       # Mr History's channel ID
