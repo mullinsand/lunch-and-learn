@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<youtube_key>&part=snippet&q=germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Sat, 12 Nov 2022 20:04:06 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "CZbkDws4PyhMQtnZ5kJBTkqSq1A",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 63,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lmwiXeibmOitA4n8oUrK3sZvbyQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "7sxora2imC0"
+              },
+              "snippet": {
+                "publishedAt": "2020-08-29T12:59:40Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Germany",
+                "description": "Sources: A Concise History of Germany (2019) by Mary Fulbrook, Cambridge University Press, Cambridge, UK. The Shortest ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/7sxora2imC0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/7sxora2imC0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/7sxora2imC0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-08-29T12:59:40Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "_uS1B_O62CjdE449GXVaIXP4wxs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "WetQZGX6odw"
+              },
+              "snippet": {
+                "publishedAt": "2019-05-29T22:36:09Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Austria",
+                "description": "Sources: “Austria” by Jeanine Sanna (2013), Mason Crest, Pennsylvania. Funk and Wagnall's New Encyclopedia (1990) vol.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/WetQZGX6odw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/WetQZGX6odw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/WetQZGX6odw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-05-29T22:36:09Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fopco4RD_xDvn8w95sRH5I3dxSQ",
+              "id": {
+                "kind": "youtube#playlist",
+                "playlistId": "PLVRhJQ5GttaJJo5HY1JcEVihUpSV6fz5o"
+              },
+              "snippet": {
+                "publishedAt": "2019-08-02T20:36:34Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "Super Quick Histories!",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-08-02T20:36:34Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "2wGMuLGLUNZJFUykUkvFgq-IF_c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "cocak3KxlZ4"
+              },
+              "snippet": {
+                "publishedAt": "2018-09-24T10:23:22Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "What is Prussia?",
+                "description": "Grunwald Battle Music is \"For an Angel\" from Royalty Free Zone - No Copyright Music ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/cocak3KxlZ4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/cocak3KxlZ4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/cocak3KxlZ4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-09-24T10:23:22Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "E8WatDr915ExCtT-4M1bkhTwNrs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "S1zCJGpE8QI"
+              },
+              "snippet": {
+                "publishedAt": "2021-09-09T06:53:45Z",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
+                "title": "A Super Quick History of Latvia",
+                "description": "Audio Requiring Attribution: MaryAnn Daly: https://commons.wikimedia.org/wiki/File:Sudrabavots_singing.webm Pictures ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mr History",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-09-09T06:53:45Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sat, 12 Nov 2022 20:04:06 GMT
+recorded_with: VCR 6.1.0
