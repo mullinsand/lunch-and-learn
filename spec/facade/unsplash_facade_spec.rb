@@ -11,10 +11,11 @@ RSpec.describe UnsplashFacade do
       end
       
       it 'returns a array of 10 country image class objects' do
-        expect(@picture).to be_an(Array)
-        expect(@picture.first).to be_a(CountryImage)
-        expect(@picture.alt_description).to be_a(String)
-        expect(@picture.url).to be_a(String)
+        expect(@pictures).to be_an(Array)
+        expect(@pictures).to be_an(Array)
+        expect(@pictures.first).to be_a(CountryImage)
+        expect(@pictures.first.alt_tag).to be_a(String)
+        expect(@pictures.first.url).to be_a(String)
       end
 
       context 'no search results' do
