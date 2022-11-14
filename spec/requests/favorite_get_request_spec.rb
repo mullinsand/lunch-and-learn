@@ -46,5 +46,18 @@ RSpec.describe 'GET /api/v1/favorites' do
         expect(@user_response[:error]).to eq('Incorrect api key used')
       end
     end
+
+    context 'user has no favorites' do
+      it 'data object is just an empty array' do
+        @user = create(:user)
+        @request_body = { api_key: @user.api_key }
+        @request_headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+  
+        get '/api/v1/favorites', headers: @request_headers, params: @request_body.to_json
+
+        favorites_response = json
+        expect(favorites_response[:data]).to eq([])
+      end
+    end
   end
 end
