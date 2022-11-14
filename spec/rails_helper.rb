@@ -85,4 +85,5 @@ VCR.configure do |config|
   config.filter_sensitive_data("<youtube_key>") { ENV['YOUTUBE_KEY']}
   config.filter_sensitive_data("<edamam_id>") { ENV['EDAMAM_ID']}
   config.filter_sensitive_data("<edamam_key>") { ENV['EDAMAM_KEY']}
+  config.filter_sensitive_data("<places_key>") { ENV['PLACES_KEY']}
 end
