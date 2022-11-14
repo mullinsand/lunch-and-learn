@@ -11,7 +11,7 @@ class RestCountriesService
     parse(response.body)
   end
 
-  def self.country_info(country)
+  def self.capital_info(country)
     response = conn.get("/v3.1/name/#{country}") do |f|
       f.params[:fields] = 'capitalInfo'
     end
