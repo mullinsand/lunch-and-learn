@@ -18,12 +18,13 @@ RSpec.describe RestCountriesService do
       end
     end
 
-    describe '#capital_lat_long' do
+    describe '#capital_info' do
       describe 'returns the lat and long of the capital of a given country' do
         before :each do
+          
           @country = 'germany'
           VCR.use_cassette('germany_country_lookup') do
-            @response = RestCountriesService.country_info(@country)
+            @response = RestCountriesService.capital_info(@country)
           end
         end
 

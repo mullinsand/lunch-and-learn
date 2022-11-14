@@ -12,7 +12,7 @@ class RestCountriesService
   end
 
   def self.capital_info(country)
-    response = conn.get("/v3.1/name/#{country}") do |f|
+    response = conn.get("/v3.1/name/#{country.parameterize}") do |f|
       f.params[:fields] = 'capitalInfo'
     end
     parse(response.body)

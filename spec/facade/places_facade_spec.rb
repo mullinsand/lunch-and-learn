@@ -16,7 +16,6 @@ RSpec.describe PlacesFacade do
         it 'returns an array tourist sight class objects' do
           expect(@tourist_sights_list).to be_an(Array)
           expect(@tourist_sights_list.first).to be_a(TouristSight)
-          require 'pry'; binding.pry
         end
       end
 
