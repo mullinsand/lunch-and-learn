@@ -36,6 +36,17 @@ RSpec.describe RestCountriesService do
           expect(@response.first[:capitalInfo]).to be_a(Hash)
           expect(@response.first[:capitalInfo][:latlng]).to be_an(Array)
         end
+
+        context 'country name has a space in it' do
+          it 'returns a hash of country info' do
+            @country = 'new zealand'
+            VCR.use_cassette('new_zealand_country_lookup') do
+              @response = RestCountriesService.capital_info(@country)
+            end
+            expect(@response.first[:capitalInfo]).to be_a(Hash)
+            expect(@response.first[:capitalInfo][:latlng]).to be_an(Array)
+          end
+        end
       end
     end
   end
