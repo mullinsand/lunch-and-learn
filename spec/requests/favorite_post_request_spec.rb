@@ -14,11 +14,11 @@ RSpec.describe 'POST /api/v1/favorites' do
         @request_headers = { 'Content-Type': 'application/json', 'Accept': 'application/json' }
       end
       it 'creates a new favorite recipe belonging to that user' do
-        expect(@user.favorites).to eq([])
+        expect(User.last.favorites).to eq([])
         post '/api/v1/favorites', headers: @request_headers, params: @request_body.to_json
         expect(response.status).to eq(201)
 
-        expect(@user.favorites.first.recipe_title).to eq(@request_body[:recipe_title])
+        expect(User.last.favorites.first.recipe_title).to eq(@request_body[:recipe_title])
       end
 
       it 'gives a success message response' do
@@ -44,7 +44,7 @@ RSpec.describe 'POST /api/v1/favorites' do
 
         expect(response.status).to eq(422)
         @user_response = json
-        expect(@user_response[:error]).to eq('Email has already been taken')
+        expect(@user_response[:error]).to eq('Incorrect api key used')
       end
     end
   end
