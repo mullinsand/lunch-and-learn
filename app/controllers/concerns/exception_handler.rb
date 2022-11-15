@@ -9,4 +9,8 @@ module ExceptionHandler
   def invalid_api_key
     json_response({error: 'Incorrect api key used'}, :unprocessable_entity)
   end
+
+  def country_not_found
+    json_response({error: 'Country not found'}, :unprocessable_entity)
+  end
 end
