@@ -32,7 +32,7 @@ ___
 - [REST Countries](https://developer.edamam.com/edamam-recipe-api)
 - [YouTube](https://developers.google.com/youtube/v3/docs/search/list)
 - [Places](https://apidocs.geoapify.com/docs/places/#categories)
-- [Usplash](https://unsplash.com/documentation)
+- [Unsplash](https://unsplash.com/documentation)
 
 ___
 
