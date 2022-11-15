@@ -5,9 +5,11 @@ RSpec.describe 'GET /api/v1/tourist_sights' do
     context 'there are results for tourist sights' do
       before :each do
         @country = 'germany'
-        VCR.use_cassette('germany_country_lookup') do
-          VCR.use_cassette('germany_places_tourist') do
+        VCR.use_cassette('all_countries') do
+          VCR.use_cassette('germany_country_lookup', allow_playback_repeats: true) do
+            VCR.use_cassette('germany_places_tourist', allow_playback_repeats: true) do
             get "/api/v1/tourist_sights?country=#{@country}"
+            end
           end
         end
         @tourist_sights_response = json
@@ -35,7 +37,9 @@ RSpec.describe 'GET /api/v1/tourist_sights' do
       it 'returns a hash with data key value of an empty array' do
           @country = 'Ecuador'
           allow(PlacesFacade).to receive(:capital_tourist_sights).and_return([])
-          get "/api/v1/tourist_sights?country=#{@country}"
+          VCR.use_cassette('all_countries') do
+            get "/api/v1/tourist_sights?country=#{@country}"
+          end
           @tourist_sights_response = json
           expect(@tourist_sights_response[:data]).to eq([])
       end
