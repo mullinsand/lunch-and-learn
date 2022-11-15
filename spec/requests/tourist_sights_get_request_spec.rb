@@ -56,17 +56,17 @@ RSpec.describe 'GET /api/v1/tourist_sights' do
       end
     end
 
-    # context 'country name does not exist/misspelled' do
-    #   it 'returns an error status code' do
-    #     @country = 'asdfjkl'
-    #     VCR.use_cassette('all_countries') do
-    #       get "/api/v1/tourist_sights?country=#{@country}"
-    #     end
+    context 'country name does not exist/misspelled' do
+      it 'returns an error status code' do
+        @country = 'asdfjkl'
+        VCR.use_cassette('all_countries') do
+          get "/api/v1/tourist_sights?country=#{@country}"
+        end
 
-    #     @error_response = json
+        @error_response = json
 
-    #     @error_response[:error] = 'Country not found'
-    #   end
-    # end
+        @error_response[:error] = 'Country not found'
+      end
+    end
   end
 end

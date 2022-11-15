@@ -40,10 +40,9 @@ RSpec.describe PlacesFacade do
 
       it 'name is one of the countries listed' do
         VCR.use_cassette('all_countries') do
-          @all_countries = RestCountriesFacade.all_countries
+          @all_countries_names = RestCountriesFacade.all_countries_names
         end
-        @all_names = @all_countries.map { |country| country[:name][:common] }
-        expect(@all_names).to include(@random_country)
+        expect(@all_countries_names).to include(@random_country)
       end
     end
 

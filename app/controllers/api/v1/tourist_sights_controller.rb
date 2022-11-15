@@ -1,8 +1,13 @@
 class Api::V1::TouristSightsController < ApplicationController
+  include ExceptionHandler
+  include Response
+
   def index
     distance = 20_000
-    # return country_not_found unless country_exists?
+    
     if params[:country]
+      return country_not_found unless country_exists?
+      
       tourist_sights = PlacesFacade.capital_tourist_sights(params[:country], distance)
     else
       country = RestCountriesFacade.random_country
@@ -13,7 +18,7 @@ class Api::V1::TouristSightsController < ApplicationController
 
   private
 
-  # def country_exists?
-  #   RestCountriesService.all_countries.map {|country| country[:name][:common].downcase }.include?(params[:country])
-  # end
+  def country_exists?
+    RestCountriesFacade.all_countries_names.include?(params[:country].downcase)
+  end
 end
