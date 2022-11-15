@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :favorite do
-    user { nil }
-    country { "MyString" }
-    recipe_link { "MyString" }
-    recipe_title { "MyString" }
+    country { Faker::Lorem.word }
+    recipe_link { Faker::Internet.url }
+    recipe_title { Faker::Lorem.sentence }
+    user
   end
 end

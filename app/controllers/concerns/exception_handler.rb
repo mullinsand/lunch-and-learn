@@ -2,6 +2,16 @@ module ExceptionHandler
 
   extend ActiveSupport::Concern
 
+  included do
+    rescue_from ActiveRecord::RecordNotFound do |error|
+      render json: { errors: error.message }, status: :not_found
+    end
+
+    rescue_from ActiveRecord::RecordInvalid do |error|
+      render json: { errors: error.message }, status: :unprocessable_entity
+    end
+  end
+
   def invalid_user_creation(user)
     json_response({error: user.errors.full_messages.to_sentence}, :unprocessable_entity)
   end
