@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "f66625f3-419e-488f-8837-0bdfa1509503",
+		"name": "Lunch and Learn",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23627265"
+	},
+	"item": [
+		{
+			"name": "get a thai recipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/recipes?country=thailand",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "thailand"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a random countries recipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recipe invalid country search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/recipes?country=uranus",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "uranus"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no recipe results from valid country search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/recipes?country=french southern and antarctic lands",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"recipes"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "french southern and antarctic lands"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a learning resource for a country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/learning_resources?country=laos",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"learning_resources"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "laos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "learning resource invalid country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/learning_resources?country=hjkadfhjkfasukhhioawbjkwebjnkwe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"learning_resources"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "hjkadfhjkfasukhhioawbjkwebjnkwe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "learning resource no video results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/learning_resources?country=hjkadfhjkfasukhhioawbjkwebjnkwe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"learning_resources"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "hjkadfhjkfasukhhioawbjkwebjnkwe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Athena Dao\",\n  \"email\": \"athenadao@bestgirlever.com\",\n  \"password\": \"123456\",\n  \"password_confirmation\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all favorites (user has no favorites)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create new favorite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"api_key\": \"70bfd710-e183-4ac0-a1fd-da7b8a4748e5\",\n          \"country\": \"thailand\",\n          \"recipe_link\": \"https://www.tastingtable.com/.....\",\n          \"recipe_title\": \"Crab Fried Rice (Khaao Pad Bpu)\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all favorites for a user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"api_key\": \"70bfd710-e183-4ac0-a1fd-da7b8a4748e5\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a favorite",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"api_key\": \"70bfd710-e183-4ac0-a1fd-da7b8a4748e5\",\n          \"favorite_id\": \"2\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a favorite (incorrect api key)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"api_key\": \"70bfd710-e183-4ac0-a1fd-da7b8a4748e5\",\n          \"favorite_id\": \"2\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a favorite (incorrect favorite key)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n          \"api_key\": \"70bfd710-e183-4ac0-a1fd-da7b8a4748e5\",\n          \"favorite_id\": \"2\"\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/favorites",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tourist sights at the capital of New Zealand",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/tourist_sights?country=New Zealand",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"tourist_sights"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "New Zealand"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
