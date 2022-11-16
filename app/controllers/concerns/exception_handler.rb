@@ -7,17 +7,9 @@ module ExceptionHandler
       render json: { errors: error.message }, status: :not_found
     end
 
-    # rescue_from ActiveRecord::RecordInvalid do |error|
-    #   render json: { errors: error.message }, status: :unprocessable_entity
-    # end
-  end
-
-  def invalid_user_creation(user)
-    json_response({error: user.errors.full_messages.to_sentence}, :unprocessable_entity)
-  end
-
-  def invalid_api_key
-    json_response({error: 'Incorrect api key used'}, :unprocessable_entity)
+    rescue_from ActiveRecord::RecordInvalid do |error|
+      render json: { errors: error.message }, status: :unprocessable_entity
+    end
   end
 
   def country_not_found

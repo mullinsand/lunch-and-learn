@@ -41,9 +41,9 @@ RSpec.describe 'GET /api/v1/favorites' do
   
         get '/api/v1/favorites', headers: @request_headers, params: @request_body.to_json
 
-        expect(response.status).to eq(422)
+        expect(response.status).to eq(404)
         @user_response = json
-        expect(@user_response[:error]).to eq('Incorrect api key used')
+        expect(@user_response[:errors]).to eq('Incorrect api key used')
       end
     end
 

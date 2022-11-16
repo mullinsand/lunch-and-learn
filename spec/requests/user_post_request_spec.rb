@@ -41,7 +41,7 @@ RSpec.describe 'POST /api/v1/users' do
 
         expect(response.status).to eq(422)
         @user_response = json
-        expect(@user_response[:error]).to eq('Email has already been taken')
+        expect(@user_response[:errors]).to eq('Validation failed: Email has already been taken')
       end
     end
   end
