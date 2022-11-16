@@ -6,8 +6,10 @@ RSpec.describe 'GET /api/v1/recipes' do
       context 'there are 10 or more recipes' do
         before :each do
           @country = 'thailand'
-          VCR.use_cassette('Recipe_search_Thailand') do
-            get "/api/v1/recipes?country=#{@country}"
+          VCR.use_cassette('all_countries') do
+            VCR.use_cassette('Recipe_search_Thailand') do
+              get "/api/v1/recipes?country=#{@country}"
+            end
           end
           @recipe_response = json
         end
@@ -35,8 +37,10 @@ RSpec.describe 'GET /api/v1/recipes' do
       context 'there are fewer than 10 recipes' do
         it 'returns at the number of recipes found from that country' do
           @country = 'thailand'
-          VCR.use_cassette('2_results_Recipe_search_Thailand') do
-            get "/api/v1/recipes?country=#{@country}"
+          VCR.use_cassette('all_countries') do
+            VCR.use_cassette('2_results_Recipe_search_Thailand') do
+              get "/api/v1/recipes?country=#{@country}"
+            end
           end
           @recipe_response = json
           expect(@recipe_response[:data].length).to eq(2)
@@ -46,11 +50,27 @@ RSpec.describe 'GET /api/v1/recipes' do
       context 'there are no results' do
         it 'returns a data key with an empty array as its value' do
           country = 'Uranus'
-          VCR.use_cassette('No_Recipe_search_Uranus') do
-            get "/api/v1/recipes?country=#{country}"
-          end
+          allow_any_instance_of(ApplicationController).to receive(:country_exists?).and_return(true)
+          # VCR.use_cassette('all_countries') do
+            VCR.use_cassette('No_Recipe_search_Uranus') do
+              get "/api/v1/recipes?country=#{country}"
+            end
+          # end
           @recipes_list = json
           expect(@recipes_list[:data]).to eq([])
+        end
+      end
+
+      context 'not a valid country' do
+        it 'returns a 404 country not found error' do
+          country = 'Uranus'
+          VCR.use_cassette('all_countries') do
+            VCR.use_cassette('No_Recipe_search_Uranus') do
+              get "/api/v1/recipes?country=#{country}"
+            end
+          end
+          @recipes_list = json
+          expect(@recipes_list[:error]).to eq('Country not found')
         end
       end
     end
@@ -58,8 +78,10 @@ RSpec.describe 'GET /api/v1/recipes' do
     context 'when a country param is not passed in' do
       it 'picks a random country and returns recipes for that country' do
         allow(RestCountriesFacade).to receive(:random_country).and_return('thailand')
-        VCR.use_cassette('Recipe_search_Thailand') do
-          get "/api/v1/recipes"
+        VCR.use_cassette('all_countries') do
+          VCR.use_cassette('Recipe_search_Thailand') do
+            get "/api/v1/recipes"
+          end
         end
         @recipes_list = json
         expect(response).to be_successful
