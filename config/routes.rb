@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resource :learning_resources, only: [:show]
       resources :users, only: [:create]
       resource :favorites, only: %i[create destroy]
-      resources :favorites, only: %i[index]
+      resources :favorites, only: [:index]
       resources :tourist_sights, only: [:index]
     end
   end
