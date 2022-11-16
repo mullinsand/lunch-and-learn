@@ -20,10 +20,19 @@ ___
 - From the command line, install gems and set up your DB:
 - `bundle install`
 - `rails db:{create,migrate,seed}`
+- This app uses the Figaro gem to handle ENV VARS
+  - `bundle exec figaro install`
+  - ENV VARS in the `config/application.yml` are
+    ```
+    UNSPLASH_KEY
+    YOUTUBE_KEY
+    EDAMAM_ID
+    EDAMAM_KEY
+    PLACES_KEY
+    ```
 - run the server with 'rails s'
-- Go to Postman and use one of these endpoints. The endpoints must look something like: http://localhost:3000/api/v1/recipes
-<!-- - Alternatively you can download the Postman Suite and run the [premade endpoints](./app/assets/files/lunch-and-learn.postman_collection.json) -->
-
+- Go to Postman and use one of these endpoints. The endpoints must look something like: `http://localhost:3000/api/v1/recipes`
+- Alternatively you can download the Postman Suite and run the [premade endpoints](./app/assets/files/Lunch_and_Learn.postman_collection.json)
 ___
 
 ## APIs Used
