@@ -3,20 +3,19 @@ class Api::V1::UsersController < ApplicationController
   include Response
 
   def create
-    user_params[:email] = user_params[:email.downcase] if user_params[:email]
-    params[:api_key] = SecureRandom.uuid
-    @user = User.new(user_params)
-    if @user.valid?
-      @user.save
-      render json: UserSerializer.new(@user), status: 201
-    else
-      invalid_user_creation(@user)
-    end
+    make_api_key
+    user = User.new(user_params)
+    render json: UserSerializer.new(user), status: 201 if user.save!
   end
 
   private
   
   def user_params
+    params[:email] = params[:email].downcase if params[:email]
     params.permit(:name, :email, :api_key, :password, :password_confirmation)
+  end
+
+  def make_api_key
+    params[:api_key] = SecureRandom.uuid
   end
 end

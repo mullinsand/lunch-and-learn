@@ -6,7 +6,7 @@ class Api::V1::TouristSightsController < ApplicationController
     distance = 20_000
     
     if params[:country]
-      return country_not_found unless country_exists?
+      return country_not_found unless country_exists?(params[:country])
       
       tourist_sights = PlacesFacade.capital_tourist_sights(params[:country], distance)
     else
