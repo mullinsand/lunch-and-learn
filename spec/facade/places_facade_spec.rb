@@ -1,22 +1,28 @@
 require 'rails_helper'
 
-RSpec.describe RestCountriesFacade do
+RSpec.describe PlacesFacade do
   describe 'class methods' do
-    describe '#all country' do
+    describe '#capital_tourist_sights' do
       before :each do
-        VCR.use_cassette('all_countries') do
-          @all_countries = RestCountriesFacade.all_countries
+        @country = 'germany'
+        @distance = 20000
+        VCR.use_cassette('germany_country_lookup') do
+          VCR.use_cassette('germany_places_tourist') do
+            @tourist_sights_list = PlacesFacade.capital_tourist_sights(@country, @distance)
+          end
+        end
+      end
+      context 'there are results for the search' do
+        it 'returns an array tourist sight class objects' do
+          expect(@tourist_sights_list).to be_an(Array)
+          expect(@tourist_sights_list.first).to be_a(TouristSight)
         end
       end
 
-      it 'returns a list of country names' do
-        expect(@all_countries).to be_an(Array)
-        expect(@all_countries.first).to be_a(Hash)
-      end
-
-      context 'no search results' do
+      context 'there are no results for the search' do
         it 'returns an empty array' do
-
+          expect(@tourist_sights_list).to be_an(Array)
+          expect(@tourist_sights_list.first).to be_a(TouristSight)
         end
       end
     end
@@ -52,17 +58,6 @@ RSpec.describe RestCountriesFacade do
         expect(@capital_info).to be_a(Hash)
         expect(@capital_info[:lat]).to eq(52.52)
         expect(@capital_info[:long]).to eq(13.4)
-      end
-    end
-
-    describe '#all_countries_names' do
-      it 'returns an array of all countries names (the common name)' do
-        VCR.use_cassette('all_countries') do
-          @all_countries_names = RestCountriesFacade.all_countries_names
-        end
-        expect(@all_countries_names).to be_an(Array)
-        expect(@all_countries_names.first).to be_a(String)
-        expect(@all_countries_names).to include('germany')
       end
     end
   end

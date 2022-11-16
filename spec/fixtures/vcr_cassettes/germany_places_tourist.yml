@@ -1,0 +1,254 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=<places_key>&categories=tourism.sights&filter=circle:13.4,52.52,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:17:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HKJFIRi4hfl66UPbNDsIouK3zg%2BhDNmDTS83bmPJiGlqqmQJqK5YnBfkngT6gRNkxta2ZiMhvA9fLE%2BUvyrmCLSPvcyW72Dpj7NYO2PxzN82OBRCxFvWAYgkP82A6annkcQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a1670c2eaee78a-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Haus
+        am Waldsee","housenumber":"30","street":"Argentinische Allee","suburb":"Zehlendorf","district":"Steglitz-Zehlendorf","city":"Berlin","postcode":"14163","country":"Germany","country_code":"de","lon":13.238418381781607,"lat":52.4420766,"formatted":"Haus
+        am Waldsee, Argentinische Allee 30, 14163 Berlin, Germany","address_line1":"Haus
+        am Waldsee","address_line2":"Argentinische Allee 30, 14163 Berlin, Germany","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","heritage","tourism","tourism.sights","wheelchair","wheelchair.yes"],"details":["details","details.contact","details.facilities","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Haus
+        am Waldsee","image":"https://commons.wikimedia.org/wiki/File:Haus_am_Waldsee,Berlin.JPG","phone":"+49
+        30 801 89 35","museum":"art","osm_id":31283095,"ref:lda":"09075627","tourism":"museum","website":"https://www.hausamwaldsee.de/","building":"yes","heritage":4,"historic":"heritage","osm_type":"w","wikidata":"Q1590720","addr:city":"Berlin","wikipedia":"de:Haus
+        am Waldsee","wheelchair":"yes","addr:street":"Argentinische Allee","addr:suburb":"Zehlendorf","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":14163,"opening_hours":"Tu-Su
+        11:00-18:00","addr:housenumber":30,"heritage:website":"http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?DOK_TPL=lda_doc.tpl&KEY=obj%2009075627","heritage:operator":"lda","toilets:wheelchair":"yes"}},"place_id":"51c2ddae331a7a2a4059efc0a25b96384a40f00102f9019757dd010000000092030f4861757320616d2057616c64736565"},"geometry":{"type":"Point","coordinates":[13.238481154533364,52.44208856055217]}},{"type":"Feature","properties":{"name":"Fort
+        Hahneberg","housenumber":"50","street":"Peter-Herzog-Weg","suburb":"Staaken","district":"Spandau","city":"Berlin","postcode":"13591","country":"Germany","country_code":"de","lon":13.137729308340758,"lat":52.521930600000005,"formatted":"Fort
+        Hahneberg, Peter-Herzog-Weg 50, 13591 Berlin, Germany","address_line1":"Fort
+        Hahneberg","address_line2":"Peter-Herzog-Weg 50, 13591 Berlin, Germany","categories":["building","building.historic","building.tourism","heritage","tourism","tourism.attraction","tourism.sights","tourism.sights.fort"],"details":["details","details.contact","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fax":"+49
+        30 366 49 81","name":"Fort Hahneberg","email":"infos@forthahneberg.de","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Spandau_Fort_Hahneberg_Kehlkaserne.JPG/1024px-Spandau_Fort_Hahneberg_Kehlkaserne.JPG","phone":"+49
+        30 366 46 05","ruins":"yes","osm_id":50898721,"ref:lda":"09085593","tourism":"attraction","website":"http://www.forthahneberg.de/das-bauwerk/","building":"yes","heritage":4,"historic":"fort","osm_type":"w","wikidata":"Q1438543","addr:city":"Berlin","wikipedia":"de:Fort
+        Hahneberg","addr:street":"Hahnebergweg","addr:suburb":"Staaken","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":13591,"opening_hours":"Sa,Su,PH
+        14:00-16:00","addr:housename":"Fort Hahneberg","addr:housenumber":50,"heritage:operator":"lda","opening_hours:note":"Führungen
+        14 und 16 Uhr"}},"place_id":"51ac4633e7b1462a4059e009e3edc9424a40f00102f90121a708030000000092030e466f7274204861686e6562657267"},"geometry":{"type":"Point","coordinates":[13.138076043137822,52.52178739152782]}},{"type":"Feature","properties":{"name":"Naturschutzturm
+        Bergfelde","street":"Waldjugendweg","district":"Bergfelde","city":"Hohen Neuendorf","county":"Oberhavel","state":"Brandenburg","postcode":"16562","country":"Germany","country_code":"de","lon":13.29983329137983,"lat":52.660023949999996,"formatted":"Naturschutzturm
+        Bergfelde, Waldjugendweg, 16562 Hohen Neuendorf, Germany","address_line1":"Naturschutzturm
+        Bergfelde","address_line2":"Waldjugendweg, 16562 Hohen Neuendorf, Germany","categories":["building","building.historic","heritage","man_made","man_made.tower","tourism","tourism.sights","tourism.sights.tower"],"details":["details","details.building","details.contact","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"url":"https://www.sdw-naturschutzturm.de/der-naturschutzturm/","name":"Naturschutzturm
+        Bergfelde","email":"kontakt@naturschutzturm.de","image":"https://commons.wikimedia.org/wiki/File:09_Brandenburg_1_Grenzwachturm_Bergfelde.JPG","phone":"+49
+        30 4063121","height":8.5,"osm_id":326399211,"website":"https://naturschutzturm.de/","building":"yes","heritage":4,"historic":"heritage","man_made":"tower","operator":"Deutsche
+        Waldjugend - Naturschutzturm - Berliner Nordrand e.V.","osm_type":"w","wikipedia":"de:Naturschutzturm","tower:type":"observation","description":"Grenzwachturm
+        mit Bunker","contact:phone":"+49 3303 509844","opening_hours":"Fr 15:00-17:00
+        open \"bitte anmelden\"","bldam:criteria":"Baudenkmal","heritage:operator":"bldam"}},"place_id":"5113aba0c183992a40599a61b8a27b544a40f00102f901eb747413000000009203194e6174757273636875747a7475726d204265726766656c6465"},"geometry":{"type":"Point","coordinates":[13.299833346236062,52.660023059873495]}},{"type":"Feature","properties":{"name":"Topographie
+        des Terrors","housenumber":"8","street":"Niederkirchnerstraße","suburb":"Kreuzberg","district":"Mitte","city":"Berlin","postcode":"10963","country":"Germany","country_code":"de","lon":13.384154817866484,"lat":52.5062137,"formatted":"Topography
+        of Terror, Niederkirchnerstraße 8, 10963 Berlin, Germany","address_line1":"Topography
+        of Terror","address_line2":"Niederkirchnerstraße 8, 10963 Berlin, Germany","categories":["entertainment","entertainment.museum","no_fee","no_fee.no","tourism","tourism.sights","tourism.sights.memorial","wheelchair","wheelchair.yes"],"details":["details","details.contact","details.facilities","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fee":"no","name":"Topographie
+        des Terrors","phone":"+49 30 2545090","osm_id":24368681,"name:de":"Topographie
+        des Terrors","name:en":"Topography of Terror","name:he":"טופוגרפיה של הטרור","name:it":"Topografia
+        del terrore","name:pl":"Topografia Terroru","toilets":"yes","tourism":"museum","website":"http://www.topographie.de","historic":"memorial","operator":"Stiftung
+        Topographie des Terrors","osm_type":"w","wikidata":"Q819081","addr:city":"Berlin","wikipedia":"de:Topographie
+        des Terrors","wheelchair":"yes","addr:street":"Niederkirchnerstraße","addr:suburb":"Kreuzberg","toilets:fee":"no","addr:country":"DE","addr:postcode":10963,"contact:email":"info@topographie.de","opening_hours":"Mo-Su
+        10:00-20:00","toilets:access":"public","contact:website":"http://www.topographie.de/","addr:housenumber":8,"toilets:wheelchair":"yes"}},"place_id":"51172c4aa9d4c42a4059549ef1eacd404a40f00102f90129d6730100000000920317546f706f677261706869652064657320546572726f7273"},"geometry":{"type":"Point","coordinates":[13.384434976867892,52.50628411100175]}},{"type":"Feature","properties":{"name":"Funkturm","street":"Messedamm","suburb":"Westend","district":"Charlottenburg-Wilmersdorf","city":"Berlin","postcode":"14055","country":"Germany","country_code":"de","lon":13.278139730432809,"lat":52.5050275,"formatted":"Funkturm,
+        Messedamm, 14055 Berlin, Germany","address_line1":"Funkturm","address_line2":"Messedamm,
+        14055 Berlin, Germany","categories":["building","building.tourism","man_made","man_made.tower","tourism","tourism.attraction","tourism.sights","tourism.sights.tower","wheelchair","wheelchair.limited"],"details":["details","details.building","details.contact","details.facilities","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Funkturm","phone":"+493030381905","height":147,"osm_id":30926247,"tourism":"attraction","website":"https://messe-berlin.de/","alt_name":"Langer
+        Lulatsch","building":"tower","man_made":"tower","osm_type":"w","wikidata":"Q699724","wheelchair":"limited","opening_hours":"Mo
+        10:00-20:00; Tu-Su 10:00-23:00","tower:construction":"lattice"}},"place_id":"517c22b30e688e2a4059fde45796a4404a40f00102f901a7e5d7010000000092030846756e6b7475726d"},"geometry":{"type":"Point","coordinates":[13.278137645117788,52.50502280513499]}},{"type":"Feature","properties":{"name":"Buddhistisches
+        Haus","street":"Enkircher Straße","suburb":"Frohnau","district":"Reinickendorf","city":"Berlin","postcode":"13465","country":"Germany","country_code":"de","lon":13.302844276629074,"lat":52.635718749999995,"formatted":"Buddhistisches
+        Haus, Enkircher Straße, 13465 Berlin, Germany","address_line1":"Buddhistisches
+        Haus","address_line2":"Enkircher Straße, 13465 Berlin, Germany","categories":["building","building.historic","building.place_of_worship","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.church"],"details":["details","details.contact","details.facilities","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Buddhistisches
+        Haus","email":"mail@das-buddhistische-haus.de","phone":"+49 30 401 55 80","osm_id":49753550,"amenity":"place_of_worship","website":"http://das-buddhistische-haus.de/pages/de/","building":"church","historic":"church","osm_type":"w","religion":"buddhist","wikipedia":"de:Das
+        Buddhistische Haus","wheelchair":"no","opening_hours":"Mo-Su 09:00-18:00"}},"place_id":"51e3ae01c4129b2a4059189727565f514a40f00102f901ce2df7020000000092031342756464686973746973636865732048617573"},"geometry":{"type":"Point","coordinates":[13.302877545552695,52.635721940356405]}},{"type":"Feature","properties":{"name":"Brücke-Museum","housenumber":"9","street":"Bussardsteig","suburb":"Dahlem","district":"Steglitz-Zehlendorf","city":"Berlin","postcode":"14195","country":"Germany","country_code":"de","lon":13.274753893246444,"lat":52.4669327,"formatted":"Bridges
+        Museum, Bussardsteig 9, 14195 Berlin, Germany","address_line1":"Bridges Museum","address_line2":"Bussardsteig
+        9, 14195 Berlin, Germany","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","heritage","tourism","tourism.sights","wheelchair","wheelchair.limited"],"details":["details","details.facilities","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Brücke-Museum","image":"http://commons.wikimedia.org/wiki/File:Br%C3%BCcke-Museum.jpg","museum":"art","osm_id":-7868401,"name:en":"Bridges
+        Museum","name:nl":"Bruggenmuseum","ref:lda":"09075316","tourism":"museum","building":"yes","heritage":4,"historic":"heritage","osm_type":"r","wikidata":"Q833759","addr:city":"Berlin","wikipedia":"de:Brücke-Museum
+        Berlin","wheelchair":"limited","addr:street":"Bussardsteig","addr:suburb":"Dahlem","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":14195,"opening_hours":"11:00-17:00;
+        Tu off","contact:website":"http://www.bruecke-museum.de/","addr:housenumber":9,"heritage:website":"http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?DOK_TPL=lda_doc.tpl&KEY=obj%2009075316","heritage:operator":"lda","toilets:wheelchair":"no","check_date:opening_hours":"2021-06-09"}},"place_id":"510e218a6ca88c2a4059b44c5f6fc43b4a40f00101f901f10f78000000000092030e4272c3bc636b652d4d757365756d"},"geometry":{"type":"Point","coordinates":[13.274722473012414,52.466932221920985]}},{"type":"Feature","properties":{"name":"Zitadelle
+        Spandau","housenumber":"64","street":"Am Juliusturm","suburb":"Haselhorst","district":"Spandau","city":"Berlin","postcode":"13599","country":"Germany","country_code":"de","lon":13.21274431030557,"lat":52.5410344,"formatted":"Spandau
+        Citadel, Am Juliusturm 64, 13599 Berlin, Germany","address_line1":"Spandau
+        Citadel","address_line2":"Am Juliusturm 64, 13599 Berlin, Germany","categories":["heritage","tourism","tourism.attraction","tourism.sights","tourism.sights.castle","wheelchair","wheelchair.yes"],"details":["details","details.facilities","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Zitadelle
+        Spandau","image":"http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Zitadelle_Spandau.jpg/800px-Zitadelle_Spandau.jpg","osm_id":4902365,"name:en":"Spandau
+        Citadel","name:fr":"Citadelle de Spandau","name:he":"מצודת שפנדאו","name:no":"Zitadelle
+        Spandau","name:pl":"Cytadela Spandau","name:ru":"Цитадель Шпандау","ref:lda":"09085439","tourism":"attraction","heritage":"yes","historic":"castle","osm_type":"w","wikidata":"Q206211","addr:city":"Berlin","wikipedia":"de:Zitadelle
+        Spandau","start_date":"1559..1594","wheelchair":"yes","addr:street":"Am Juliusturm","addr:suburb":"Haselhorst","castle_type":"fortress","description":"Festung,
+        bis zum 19. Jahrhundert auch Gefängnis für preußische Staatsgefangene","addr:country":"DE","lda:criteria":"Gesamtanlage","addr:postcode":13599,"opening_hours":"Mo-Su
+        10:00-17:00","addr:housename":"Zitadelle Spandau","contact:website":"https://www.zitadelle-berlin.de/","addr:housenumber":64,"heritage:website":"https://www.berlin.de/landesdenkmalamt/denkmale/liste-karte-datenbank/denkmaldatenbank/daobj.php?obj_dok_nr=09085439","heritage:operator":"lda","wikimedia_commons":"Category:Zitadelle
+        Spandau","contact:website:en":"https://www.zitadelle-spandau.de/English_Version/english_version.html","wheelchair:description":"Leider
+        nur bedingt rolligerecht, die komplette Zuwegung ist mit Kopfsteinpflaster
+        versehen."}},"place_id":"51b44bd942ed6c2a4059dcaa989341454a40f00102f901ddcd4a00000000009203115a69746164656c6c65205370616e646175"},"geometry":{"type":"Point","coordinates":[13.212747658753734,52.541063737434996]}},{"type":"Feature","properties":{"name":"Schlosskirche
+        Buch","housenumber":"36","street":"Alt-Buch","suburb":"Buch","district":"Pankow","city":"Berlin","postcode":"13125","country":"Germany","country_code":"de","lon":13.49850363473207,"lat":52.63540675,"formatted":"Schlosskirche
+        Buch, Alt-Buch 36, 13125 Berlin, Germany","address_line1":"Schlosskirche Buch","address_line2":"Alt-Buch
+        36, 13125 Berlin, Germany","categories":["building","building.historic","building.place_of_worship","heritage","tourism","tourism.sights","tourism.sights.place_of_worship","wheelchair","wheelchair.yes"],"details":["details","details.building","details.contact","details.facilities","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Schlosskirche
+        Buch","image":"http://commons.wikimedia.org/wiki/File:Schlosskirche_Berlin-Buch_01.jpg","phone":"+49
+        30 9497163","osm_id":16413313,"amenity":"place_of_worship","website":"https://www.schlosskirche-berlin-buch.de/","building":"yes","heritage":4,"historic":"heritage","operator":"Evangelische
+        Gemeinde Berlin-Buch","osm_type":"w","religion":"christian","wikidata":"Q2244590","addr:city":"Berlin","architect":"Friedrich
+        Wilhelm Diterichs","roof:shape":"hipped","start_date":1736,"wheelchair":"yes","addr:street":"Alt-Buch","addr:suburb":"Buch","roof:colour":"green","roof:height":1,"addr:country":"DE","denomination":"protestant","addr:postcode":13125,"building:colour":"#E77300","building:levels":4,"addr:housenumber":36,"heritage:operator":"lda"}},"place_id":"51d702b8ee3bff2a4059aa35ae0655514a40f00102f9018172fa00000000009203125363686c6f73736b69726368652042756368"},"geometry":{"type":"Point","coordinates":[13.498504123651783,52.63540729051904]}},{"type":"Feature","properties":{"name":"Schloss
+        Schönhausen","old_name":"Schloß Niederschönhausen","housenumber":"1","street":"Tschaikowskistraße","suburb":"Niederschönhausen","district":"Pankow","city":"Berlin","postcode":"13156","country":"Germany","country_code":"de","lon":13.405648163311849,"lat":52.578421199999994,"formatted":"Schönhausen
+        Palace, Tschaikowskistraße 1, 13156 Berlin, Germany","address_line1":"Schönhausen
+        Palace","address_line2":"Tschaikowskistraße 1, 13156 Berlin, Germany","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","fee","heritage","tourism","tourism.sights","tourism.sights.castle","wheelchair","wheelchair.yes"],"details":["details","details.building","details.facilities","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fee":"yes","name":"Schloss
+        Schönhausen","image":"http://commons.wikimedia.org/wiki/File:SchlossSch%C3%B6nhausen-20100912111443.jpg","osm_id":24315051,"name:de":"Schloss
+        Schönhausen","name:en":"Schönhausen Palace","name:fr":"Château de Schönhausen","name:nl":"Slot
+        Schönhausen","name:ro":"Castelul Schönhausen","name:ru":"Дворец Шёнхаузен","ref:lda":"09085337","tourism":"museum","website":"https://www.spsg.de/index.php?id=3422","building":"yes","heritage":4,"historic":"castle","old_name":"Schloß
+        Niederschönhausen","osm_type":"w","wikidata":"Q681355","addr:city":"Berlin","wikipedia":"de:Schloss
+        Schönhausen","start_date":1662,"wheelchair":"yes","addr:street":"Tschaikowskistraße","addr:suburb":"Niederschönhausen","castle_type":"stately","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":13156,"opening_hours":"Apr-Oct:
+        Tu-Su 10:00-18:00; Nov-Mar: Sa-Su 10:00-17:00","addr:housenumber":1,"heritage:operator":"lda"}},"place_id":"5153ba35d7b6cf2a405910528337074a4a40f00102f901ab047301000000009203145363686c6f737320536368c3b66e68617573656e"},"geometry":{"type":"Point","coordinates":[13.405691838558743,52.5783452407087]}},{"type":"Feature","properties":{"name":"Locanda
+        12 Apostoli","housenumber":"90","street":"Hüttenweg","suburb":"Grunewald","district":"Charlottenburg-Wilmersdorf","city":"Berlin","postcode":"14193","country":"Germany","country_code":"de","lon":13.256204018140982,"lat":52.466371300000006,"formatted":"Locanda
+        12 Apostoli, Hüttenweg 90, 14193 Berlin, Germany","address_line1":"Locanda
+        12 Apostoli","address_line2":"Hüttenweg 90, 14193 Berlin, Germany","categories":["building","building.catering","building.historic","catering","catering.restaurant","catering.restaurant.italian","heritage","tourism","tourism.sights","wheelchair","wheelchair.limited"],"details":["details","details.catering","details.contact","details.facilities","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Locanda
+        12 Apostoli","image":"http://commons.wikimedia.org/wiki/File:H%C3%BCttenweg_90_Berlin-Dahlem.jpg","phone":"+49
+        30 8181910","osm_id":25325965,"amenity":"restaurant","cuisine":"italian","ref:lda":"09075450","website":"http://locanda-12apostoli.de/","building":"yes","heritage":4,"historic":"heritage","osm_type":"w","addr:city":"Berlin","wheelchair":"limited","addr:street":"Hüttenweg","addr:suburb":"Grunewald","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":14193,"opening_hours":"Mo-Su,PH
+        10:00-23:00","addr:housenumber":90,"heritage:website":"www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?DOK_TPL=lda_doc.tpl&#38;KEY=obj%2009075450","heritage:operator":"lda"}},"place_id":"518a7c702c2d832a4059f48afd0db23b4a40f00102f9018d718201000000009203134c6f63616e64612031322041706f73746f6c69"},"geometry":{"type":"Point","coordinates":[13.256204022151241,52.466371296692074]}},{"type":"Feature","properties":{"name":"Museumsdorf
+        Düppel","suburb":"Nikolassee","district":"Steglitz-Zehlendorf","city":"Berlin","postcode":"14163","country":"Germany","country_code":"de","lon":13.233305907223176,"lat":52.4254973,"formatted":"Museum
+        Village Düppel, 14163 Berlin, Germany","address_line1":"Museum Village Düppel","address_line2":"14163
+        Berlin, Germany","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.archaeological_site"],"details":["details","details.contact","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Museumsdorf
+        Düppel","email":"info@dueppel.de","image":"http://commons.wikimedia.org/wiki/File:Museumsdorf_D%C3%BCppel5.JPG","phone":"+49
+        30 8026671","osm_id":28147152,"barrier":"fence","name:en":"Museum Village
+        Düppel","name:nl":"Museumdorp Düppel","natural":"grassland","tourism":"museum","website":"https://www.dueppel.de/","historic":"archaeological_site","osm_type":"w","wikidata":"Q885171","addr:city":"Berlin","wikipedia":"de:Museumsdorf
+        Düppel","addr:street":"Clauertstraße","addr:postcode":14163,"addr:housenumber":11,"TMC:cid_58:tabcd_1:Class":"Area","TMC:cid_58:tabcd_1:LCLversion":9,"TMC:cid_58:tabcd_1:LocationCode":32540}},"place_id":"514ef8bd377b772a40597cd71a2e6c364a40f00102f901d07dad01000000009203134d757365756d73646f72662044c3bc7070656c"},"geometry":{"type":"Point","coordinates":[13.233361951770487,52.42517639456398]}},{"type":"Feature","properties":{"name":"Gutshaus
+        Lichterfelde","housenumber":"28","street":"Hindenburgdamm","suburb":"Lichterfelde","district":"Steglitz-Zehlendorf","city":"Berlin","postcode":"12203","country":"Germany","country_code":"de","lon":13.316448257349323,"lat":52.43900325,"formatted":"Gutshaus
+        Lichterfelde, Hindenburgdamm 28, 12203 Berlin, Germany","address_line1":"Gutshaus
+        Lichterfelde","address_line2":"Hindenburgdamm 28, 12203 Berlin, Germany","categories":["building","building.historic","heritage","tourism","tourism.sights"],"details":["details","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Gutshaus
+        Lichterfelde","image":"http://commons.wikimedia.org/wiki/File:Lichterfelde_Gutshaus_Carstenns_Schl%C3%B6sschen.jpg","osm_id":30432771,"ref:lda":"09065859","website":"https://www.stadtteilzentrum-steglitz.de/category/gutshaus-lichterfelde/","building":"yes","heritage":4,"historic":"heritage","osm_type":"w","wikidata":"Q32306724","addr:city":"Berlin","wikipedia":"de:Gutshaus
+        Lichterfelde","addr:street":"Hindenburgdamm","addr:suburb":"Lichterfelde","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":12203,"opening_hours":"Mo-Fr
+        09:00-17:00","addr:housenumber":28,"heritage:website":"http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?KEY=obj%2009065859","heritage:operator":"lda"}},"place_id":"517dc882fd03a22a4059790efb0131384a40f00102f901035ed001000000009203154775747368617573204c69636874657266656c6465"},"geometry":{"type":"Point","coordinates":[13.316436693396321,52.43899559744472]}},{"type":"Feature","properties":{"name":"Checkpoint
+        Bravo","housenumber":"45a","street":"Albert-Einstein-Ring","suburb":"Europarc
+        Dreilinden","city":"Kleinmachnow","county":"Potsdam-Mittelmark","state":"Brandenburg","postcode":"14532","country":"Germany","country_code":"de","lon":13.191928250000004,"lat":52.4073635,"formatted":"Checkpoint
+        Bravo, Albert-Einstein-Ring 45a, 14532 Kleinmachnow, Germany","address_line1":"Checkpoint
+        Bravo","address_line2":"Albert-Einstein-Ring 45a, 14532 Kleinmachnow, Germany","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","man_made","man_made.tower","tourism","tourism.sights","tourism.sights.tower"],"details":["details","details.building","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Checkpoint
+        Bravo","image":"http://commons.wikimedia.org/wiki/File:Kleinmachnow_Checkpoint_Bravo.JPG","osm_id":106050244,"tourism":"museum","website":"https://www.checkpoint-bravo.de/","building":"yes","historic":"yes","man_made":"tower","operator":"Checkpoint
+        Bravo e. V.","osm_type":"w","addr:city":"Kleinmachnow","wikipedia":"de:Checkpoint
+        Bravo","tower:type":"watchtower","addr:street":"Albert-Einstein-Ring","description":"Checkpoint
+        Bravo, Erinnerungs- und Begegnungsstätte Drewitz-Dreilinden","addr:country":"DE","addr:postcode":14532,"opening_hours":"May-Oct
+        Su 11:00-16:00","building:levels":2,"addr:housenumber":"45a"}},"place_id":"5165db696b44622a40594717b57c24344a40f00102f901c432520600000000920310436865636b706f696e7420427261766f"},"geometry":{"type":"Point","coordinates":[13.191928249999998,52.40736349909144]}},{"type":"Feature","properties":{"name":"Denkmal
+        für die ermordeten Juden Europas","housenumber":"1","street":"Cora-Berliner-Straße","suburb":"Mitte","district":"Mitte","city":"Berlin","postcode":"10117","country":"Germany","country_code":"de","lon":13.378739867580293,"lat":52.51384835,"formatted":"Memorial
+        to the Murdered Jews of Europe, Cora-Berliner-Straße 1, 10117 Berlin, Germany","address_line1":"Memorial
+        to the Murdered Jews of Europe","address_line2":"Cora-Berliner-Straße 1, 10117
+        Berlin, Germany","categories":["no_fee","no_fee.no","tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","wheelchair","wheelchair.limited"],"details":["details","details.contact","details.facilities","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fee":"no","name":"Denkmal
+        für die ermordeten Juden Europas","image":"http://commons.wikimedia.org/wiki/File:Berlin_Holocaust_Memorial.jpg","osm_id":172234733,"name:af":"Monument
+        vir die vermoorde Jode van Europa","name:be":"Мемарыял забітым жыдам Еўропы","name:br":"Monumant
+        da Yuzevien Europa drouklazhet","name:cs":"Židovský památník","name:de":"Denkmal
+        für die ermordeten Juden Europas","name:en":"Memorial to the Murdered Jews
+        of Europe","name:eo":"Memorejo por la murditaj judoj de Eŭropo","name:es":"Monumento
+        a los judíos de Europa asesinados","name:eu":"Eraildako Europako Juduen aldeko
+        monumentua","name:fr":"Mémorial aux Juifs assassinés d''Europe","name:he":"אנדרטה
+        לזכר יהודי אירופה שנרצחו","name:it":"Memoriale per gli ebrei assassinati d''Europa","name:ja":"虐殺されたヨーロッパのユダヤ人のための記念碑","name:ko":"학살된
+        유럽 유대인을 위한 기억물","name:lb":"Memorial fir déi ermuert Judden aus Europa","name:nl":"Holocaustmonument","name:no":"Minnesmerket
+        over Europas myrdete jøder","name:pl":"Pomnik Pomordowanych Żydów Europy","name:pt":"Memorial
+        aos Judeus Mortos da Europa","name:ru":"Мемориал памяти убитых евреев Европы
+        в Берлине","name:sk":"Pomník zavraždeným Židom Európy","name:sv":"Monument
+        över Europas mördade judar","name:tr":"Katledilen Avrupalı Yahudiler Anıtı","name:zh":"歐洲被害猶太人紀念碑","tourism":"attraction","alt_name":"Holocaust-Mahnmal","historic":"memorial","osm_type":"w","wikidata":"Q160700","addr:city":"Berlin","wikipedia":"de:Denkmal
+        für die ermordeten Juden Europas","short_name":"Holocaust-Mahnmal","wheelchair":"limited","addr:street":"Cora-Berliner-Straße","addr:suburb":"Mitte","alt_name:es":"Monumento_al_Holocausto","addr:country":"DE","addr:postcode":10117,"contact:phone":"+49
+        30 2639430","opening_hours":"24/7","contact:website":"http://www.stiftung-denkmal.de","addr:housenumber":1,"wheelchair:description":"Es
+        gibt 13 besonders gekennzeichnete Wege durch die Stelen für Rollstuhlfahrerinnen
+        und Rollstuhlfahrer."}},"place_id":"51fcd48a45dbc12a40591c388094c8414a40f00102f901ed17440a0000000092032944656e6b6d616c2066c3bc72206469652065726d6f72646574656e204a7564656e204575726f706173"},"geometry":{"type":"Point","coordinates":[13.378626034924757,52.51393371830656]}},{"type":"Feature","properties":{"name":"Anhalt","housenumber":"2","street":"Vor
+        dem Schlesischen Tor","neighbourhood":"Luisenstadt","suburb":"Kreuzberg","district":"Friedrichshain-Kreuzberg","city":"Berlin","postcode":"10997","country":"Germany","country_code":"de","lon":13.450006709117211,"lat":52.497123450000004,"formatted":"Anhalt,
+        Vor dem Schlesischen Tor 2, 10997 Berlin, Germany","address_line1":"Anhalt","address_line2":"Vor
+        dem Schlesischen Tor 2, 10997 Berlin, Germany","categories":["building","building.catering","building.commercial","building.historic","building.office","catering","catering.restaurant","heritage","tourism","tourism.sights"],"details":["details","details.building","details.contact","details.facilities","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Anhalt","image":"File:Berlin,
+        Kreuzberg, Vor dem Schlesischen Tor 2, Tankstelle.jpg","osm_id":235843126,"amenity":"restaurant","ref:lda":"09031259","building":"commercial","heritage":4,"historic":"heritage","operator":"arena
+        berlin","osm_type":"w","wikidata":"Q21036450","addr:city":"Berlin","start_date":1929,"wheelchair":"no","addr:street":"Vor
+        dem Schlesischen Tor","description":"ehemalige Tankstelle","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":10997,"contact:email":"info@anhalt-berlin.de","opening_hours":"Mo-Fr
+        12:00-16:00","building:levels":2,"contact:website":"http://www.kulturarena-berlin.de/anhalt.aspx","addr:housenumber":2,"heritage:website":"http://www.stadtentwicklung.berlin.de/denkmal/liste_karte_datenbank/de/denkmaldatenbank/daobj.php?obj_dok_nr=09031259","heritage:operator":"lda"}},"place_id":"514f62eb4867e62a40597ee81cbea13f4a40f00102f90136ae0e0e00000000920306416e68616c74"},"geometry":{"type":"Point","coordinates":[13.450006750806237,52.49712349330456]}},{"type":"Feature","properties":{"name":"Bockwindmühle
+        Marzahn","housenumber":"4","street":"Hinter der Mühle","suburb":"Marzahn","district":"Marzahn-Hellersdorf","city":"Berlin","postcode":"12685","country":"Germany","country_code":"de","lon":13.563542012842392,"lat":52.54402975,"formatted":"Bockwindmühle
+        Marzahn, Hinter der Mühle 4, 12685 Berlin, Germany","address_line1":"Bockwindmühle
+        Marzahn","address_line2":"Hinter der Mühle 4, 12685 Berlin, Germany","categories":["building","building.tourism","man_made","man_made.windmill","tourism","tourism.attraction","tourism.sights","tourism.sights.windmill"],"details":["details","details.building","details.contact","details.facilities","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Bockwindmühle
+        Marzahn","image":"File:Nahaufnahme_der_Bockwindmühle_Marzahn.jpg","osm_id":488491965,"tourism":"attraction","website":"http://www.marzahner-muehle.de/","building":"yes","man_made":"windmill","operator":"Bezirksamt
+        Marzahn-Hellerdorf und Mühlenverein Berlin-Marzahn e.V.","osm_type":"w","wikidata":"Q1564662","addr:city":"Berlin","wikipedia":"de:Marzahner
+        Bockwindmühle","start_date":1994,"wheelchair":"no","addr:street":"Hinter der
+        Mühle","addr:suburb":"Marzahn","contact:fax":"+49 30 5458995","guided_tour":"Mo-Fr
+        10:00-12:00,13:00-16:00;Sa,Su,PH off;Ari-Oct: Su 15:00-17:00","addr:country":"DE","contact:addr":"Müllerhaus,
+        Alt-Marzahn 63, 12685 Berlin - Jürgen Wolf","addr:postcode":12685,"contact:email":"muehlenwolf@gmx.net","contact:phone":"+49
+        30 5458995","contact:mobile":"+49 176 28073054","contact:website":"http://www.marzahner-muehle.de/","addr:housenumber":4}},"place_id":"510ab5de9388202b40597ca692c4a2454a40f00102f901bdcb1d1d00000000920316426f636b77696e646dc3bc686c65204d61727a61686e"},"geometry":{"type":"Point","coordinates":[13.56354200452417,52.54402978096638]}},{"type":"Feature","properties":{"name":"Brandenburger
+        Tor","housenumber":"1","street":"Pariser Platz","suburb":"Mitte","district":"Mitte","city":"Berlin","postcode":"10117","country":"Germany","country_code":"de","lon":13.377701882994323,"lat":52.51628045,"formatted":"Brandenburg
+        Gate, Pariser Platz 1, 10117 Berlin, Germany","address_line1":"Brandenburg
+        Gate","address_line2":"Pariser Platz 1, 10117 Berlin, Germany","categories":["building","building.historic","building.tourism","heritage","tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument","wheelchair","wheelchair.yes"],"details":["details","details.building","details.facilities","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Brandenburger
+        Tor","image":"http://upload.wikimedia.org/wikipedia/commons/7/71/Brandenburger_Tor_2005_006.JPG","osm_id":518071791,"name:be":"Брандэнбургская
+        брама","name:bg":"Бранденбургска врата","name:cs":"Braniborská brána","name:de":"Brandenburger
+        Tor","name:el":"Πύλη του Βρανδεμβούργου","name:en":"Brandenburg Gate","name:es":"Puerta
+        de Brandeburgo","name:et":"Brandenburgi värav","name:fi":"Brandenburgin portti","name:fr":"Porte
+        de Brandebourg","name:he":"שער ברנדנבורג","name:hr":"Brandenburška vrata","name:hu":"Brandenburgi
+        kapu","name:is":"Brandenborgarhliðið","name:it":"Porta di Brandeburgo","name:ja":"ブランデンブルク門","name:ko":"브란덴부르크
+        문","name:la":"Porta Brandenburgensis","name:lt":"Brandenburgo vartai","name:lv":"Brandenburgas
+        vārti","name:nl":"Brandenburger Poort","name:pl":"Brama Brandenburska","name:pt":"Portão
+        de Brandemburgo","name:ro":"Poarta Brandenburg","name:ru":"Бранденбургские
+        ворота","name:sh":"Brandenburška vrata","name:sk":"Brandenburská brána","name:sl":"Brandenburška
+        vrata","name:sr":"Бранденбуршка капија","name:tr":"Brandenburg Kapısı","name:zh":"布蘭登堡門","ref:lda":"09065019","tourism":"attraction","website":"http://www.berlin.de/orte/sehenswuerdigkeiten/brandenburger-tor/","building":"yes","heritage":4,"historic":"monument","osm_type":"w","wikidata":"Q82425","addr:city":"Berlin","architect":"Carl
+        Gotthard Langhans","direction":"W","wikipedia":"de:Brandenburger Tor","start_date":1791,"wheelchair":"yes","addr:street":"Pariser
+        Platz","addr:suburb":"Mitte","alt_name:cs":"Brandenburská brána","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":10117,"opening_hours":"24/7","addr:housenumber":1,"heritage:website":"https://www.berlin.de/landesdenkmalamt/denkmale/liste-karte-datenbank/denkmaldatenbank/daobj.php?obj_dok_nr=09065019","heritage:operator":"lda","wikimedia_commons":"File:Brandenburger
+        Tor 2005 006.JPG","architect:wikidata":"Q313181","toilets:wheelchair":"no","architect:wikipedia":"de:Carl
+        Gotthard Langhans","contact:tripadvisor":"https://www.tripadvisor.com/Attraction_Review-g187323-d190518-Reviews-Brandenburg_Gate-Berlin.html","heritage:description":"Baudenkmal","construction:start_date":1788}},"place_id":"5198f4533c62c12a4059343e9f4915424a40f00102f901ef25e11e000000009203114272616e64656e62757267657220546f72"},"geometry":{"type":"Point","coordinates":[13.377702603577106,52.516274645572054]}},{"type":"Feature","properties":{"name":"Gedenkstätte
+        Plötzensee","street":"Hüttigpfad","suburb":"Charlottenburg-Nord","district":"Charlottenburg-Wilmersdorf","city":"Berlin","postcode":"13627","country":"Germany","country_code":"de","lon":13.322819238809192,"lat":52.54086745,"formatted":"Gedenkstätte
+        Plötzensee, Hüttigpfad, 13627 Berlin, Germany","address_line1":"Gedenkstätte
+        Plötzensee","address_line2":"Hüttigpfad, 13627 Berlin, Germany","categories":["entertainment","entertainment.museum","no_fee","no_fee.no","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fee":"no","name":"Gedenkstätte
+        Plötzensee","image":"http://commons.wikimedia.org/wiki/File:Gedenkst._Pl%C3%B6tzensee_Gedenkmauer_%28Alter_Fritz%29.jpg","osm_id":759414113,"tourism":"museum","website":"https://www.gedenkstaette-ploetzensee.de/","historic":"memorial","osm_type":"w","wikidata":"Q694274","addr:city":"Berlin","addr:street":"Hüttigpfad","addr:suburb":"Charlottenburg-Nord","addr:country":"DE","addr:postcode":13627,"opening_hours":"Mar-Oct
+        09:00-17:00; Nov-Feb 09:00-16:00; Dec 24-26,Dec 31 off; Jan 01 off","abandoned:amenity":"prison"}},"place_id":"51e236ff644fa52a405981643c763b454a40f00102f90161bd432d00000000920319476564656e6b7374c3a474746520506cc3b6747a656e736565"},"geometry":{"type":"Point","coordinates":[13.322871357111072,52.540877131928035]}},{"type":"Feature","properties":{"name":"Goethe
+        Oberschule","housenumber":"72","street":"Drakestraße","suburb":"Lichterfelde","district":"Steglitz-Zehlendorf","city":"Berlin","postcode":"12205","country":"Germany","country_code":"de","lon":13.305368564922162,"lat":52.4346023,"formatted":"Goethe
+        Oberschule, Drakestraße 72, 12205 Berlin, Germany","address_line1":"Goethe
+        Oberschule","address_line2":"Drakestraße 72, 12205 Berlin, Germany","categories":["building","building.historic","building.school","heritage","tourism","tourism.sights"],"details":["details","details.building","details.contact","details.facilities","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"fax":"+49
+        30 84416731","name":"Goethe Oberschule","email":"sekretariat@goethe-oberschule-berlin.de","phone":"+49
+        30 84416730","osm_id":19648682,"ref:lda":"09065766","website":"http://www.goethe-oberschule-berlin.de/","building":"school","heritage":4,"historic":"heritage","osm_type":"w","wikidata":"Q1534133","addr:city":"Berlin","wikipedia":"de:Goethe-Gymnasium
+        (Berlin-Lichterfelde)","roof:shape":"hipped","wheelchair":"no","addr:street":"Drakestraße","addr:suburb":"Lichterfelde","addr:country":"DE","lda:criteria":"Baudenkmal","addr:postcode":12205,"building:levels":3,"addr:housenumber":72,"heritage:website":"http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?KEY=obj%2009065766","heritage:operator":"lda"}},"place_id":"51aae36141599c2a4059a19e41729d374a40f00102f901aad02b0100000000920311476f65746865204f626572736368756c65"},"geometry":{"type":"Point","coordinates":[13.305368464660052,52.43449238018116]}}]}'
+  recorded_at: Mon, 14 Nov 2022 17:17:56 GMT
+recorded_with: VCR 6.1.0

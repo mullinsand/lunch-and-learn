@@ -1,0 +1,245 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/Ecuador?fields=capitalInfo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 18:11:23 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '131'
+    body:
+      encoding: UTF-8
+      string: '[{"capitalInfo":{"latlng":[-0.22,-78.5]},"capital":["Quito"],"altSpellings":["EC","Republic
+        of Ecuador","República del Ecuador"]}]'
+  recorded_at: Mon, 14 Nov 2022 18:11:23 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=<places_key>&categories=tourism.sights&filter=circle:-78.5,-0.22,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 18:11:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=J8E36WzXi0Yz4sCYRzmEysQmk17gaMz3AOwyT99XQ52dG%2BC2ohzU3mQB3FZ2tZk4sVoBQgZ%2FcUzAGo53yvnpGMhOfswXcp%2Fdg%2BwaY46E%2F51sQeKgr4uM%2BDHe18ZjLEBOcb0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a1b5982833e96e-DFW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Museo
+        de la Ciudad","housenumber":"S1-47","street":"García Moreno","suburb":"Gonzalez
+        Suarez","district":"Centro Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170405","country":"Ecuador","country_code":"ec","lon":-78.51501066910681,"lat":-0.22306274999999998,"formatted":"City
+        Museum, García Moreno S1-47, 170405, Quito, Ecuador","address_line1":"City
+        Museum","address_line2":"García Moreno S1-47, 170405, Quito, Ecuador","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.contact","details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Museo
+        de la Ciudad","email":"comunicacionmdc@fmcquito.gob.ec","phone":"+59322283882","osm_id":31281502,"name:en":"City
+        Museum","tourism":"museum","building":"yes","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q19896440","wikipedia":"en:City
+        Museum (Quito)","addr:street":"García Moreno","whc:criteria":"(ii),(iv)","opening_hours":"Fr-Su
+        09:00-16:00","addr:housenumber":"S1-47","heritage:operator":"whc"}},"place_id":"518dd5687cf5a053c05969378a313f8fccbff00102f9015e51dd01000000009203124d7573656f206465206c6120436975646164"},"geometry":{"type":"Point","coordinates":[-78.5149832748195,-0.22312154692593403]}},{"type":"Feature","properties":{"name":"Almacenes
+        MONTERO (Centro Histórico)","housenumber":"Oe4-33","street":"Sucre","suburb":"Gonzalez
+        Suarez","district":"Centro Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170401","country":"Ecuador","country_code":"ec","lon":-78.5131217,"lat":-0.2217832,"formatted":"MONTERO
+        Stores (Centro Histórico), Sucre Oe4-33, 170401, Quito, Ecuador","address_line1":"MONTERO
+        Stores (Centro Histórico)","address_line2":"Sucre Oe4-33, 170401, Quito, Ecuador","categories":["commercial","commercial.department_store","tourism","tourism.sights"],"details":["details","details.contact"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Almacenes
+        MONTERO (Centro Histórico)","shop":"department_store","email":"montero-centro@montero.ec","phone":"+5932-295-0244","osm_id":4586164394,"name:en":"MONTERO
+        Stores (Centro Histórico)","website":"www.montero.ec","historic":"district","osm_type":"n","addr:street":"Sucre","addr:postcode":170401,"opening_hours":"Mo-Fr
+        09:00-18:45; Sa 09:00-16:30","addr:housenumber":"Oe4-33"}},"place_id":"518c1766fcd6a053c059f14b5a536463ccbff00103f901aa505b1101000000920325416c6d6163656e6573204d4f4e5445524f202843656e74726f2048697374c3b37269636f29"},"geometry":{"type":"Point","coordinates":[-78.5131217,-0.22178319997746557]}},{"type":"Feature","properties":{"name":"Centro
+        Cultural Metropolitano","street":"Sebastián de Benalcázar","suburb":"Gonzalez
+        Suarez","district":"Centro Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.51327103722288,"lat":-0.2203445,"formatted":"Centro
+        Cultural Metropolitano, Sebastián de Benalcázar, 17041, Quito, Ecuador","address_line1":"Centro
+        Cultural Metropolitano","address_line2":"Sebastián de Benalcázar, 17041, Quito,
+        Ecuador","categories":["building","building.historic","building.public_and_civil","education","education.library","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Centro
+        Cultural Metropolitano","osm_id":31134646,"amenity":"library","ref:whc":2,"building":"yes","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q18418370","start_date":1622,"whc:criteria":"ii,
+        iv","opening_hours":"Tu-Sa 09:00-17:30; Su 10:00-16:00","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"51ad280713daa053c059a8548ec5a135ccbff00102f901b613db010000000092031d43656e74726f2043756c747572616c204d6574726f706f6c6974616e6f"},"geometry":{"type":"Point","coordinates":[-78.51331020068274,-0.2203867163304143]}},{"type":"Feature","properties":{"name":"Palacio
+        de Cristal Centro cultural Itchimbia","street":"Manuel Lopera","suburb":"Itchimbia","district":"Itchimbia","city":"Quito","county":"Quito
+        Canton","state":"Pichincha","postcode":"170130","country":"Ecuador","country_code":"ec","lon":-78.50177895,"lat":-0.21998,"formatted":"Palacio
+        de Cristal Centro cultural Itchimbia, Manuel Lopera, 170130, Quito, Ecuador","address_line1":"Palacio
+        de Cristal Centro cultural Itchimbia","address_line2":"Manuel Lopera, 170130,
+        Quito, Ecuador","categories":["building","building.entertainment","building.historic","building.public_and_civil","entertainment","entertainment.culture","entertainment.culture.arts_centre","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palacio
+        de Cristal Centro cultural Itchimbia","osm_id":31144711,"amenity":"arts_centre","website":"http://www.centrocultural-quito.com/","building":"public","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q5761156","wikipedia":"es:Centro
+        Cultura Itchimbía","start_date":1889,"whc:criteria":"(ii),(iv)","heritage:operator":"whc"}},"place_id":"518f0475251da053c05952ccd6fc4d28ccbff00102f901073bdb010000000092032c50616c6163696f206465204372697374616c2043656e74726f2063756c747572616c2049746368696d626961"},"geometry":{"type":"Point","coordinates":[-78.50177895,-0.21997999997765533]}},{"type":"Feature","properties":{"name":"Basílica
+        del Voto Nacional o del Sagrado Corazón de Jesús","street":"Venezuela","suburb":"San
+        Juan","district":"San Juan","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170402","country":"Ecuador","country_code":"ec","lon":-78.5073241319235,"lat":-0.21472839999999999,"formatted":"Basílica
+        del Voto Nacional o del Sagrado Corazón de Jesús, Venezuela, 170402, Quito,
+        Ecuador","address_line1":"Basílica del Voto Nacional o del Sagrado Corazón
+        de Jesús","address_line2":"Venezuela, 170402, Quito, Ecuador","categories":["building","building.historic","building.place_of_worship","heritage","heritage.unesco","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.cathedral"],"details":["details","details.heritage","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Basílica
+        del Voto Nacional o del Sagrado Corazón de Jesús","osm_id":107938444,"amenity":"place_of_worship","ref:whc":2,"website":"https://es.wikipedia.org/wiki/Bas%C3%ADlica_del_Voto_Nacional","building":"cathedral","heritage":1,"historic":"heritage","osm_type":"w","religion":"christian","addr:city":"Quito","wikipedia":"es:Basílica
+        de Voto Nacional","denomination":"roman_catholic","whc:criteria":"ii, iv","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"510980506c78a053c059a666ca9c517dcbbff00102f9018c026f060000000092033c426173c3ad6c6963612064656c20566f746f204e6163696f6e616c206f2064656c205361677261646f20436f72617ac3b36e206465204a6573c3ba73"},"geometry":{"type":"Point","coordinates":[-78.50735004292814,-0.21476192622940465]}},{"type":"Feature","properties":{"name":"Palacio
+        de Carondelet","street":"García Moreno","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.51253688518077,"lat":-0.2197173,"formatted":"Palacio
+        de Carondelet, García Moreno, 17041, Quito, Ecuador","address_line1":"Palacio
+        de Carondelet","address_line2":"García Moreno, 17041, Quito, Ecuador","categories":["building","building.historic","building.office","heritage","heritage.unesco","office","office.government","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palacio
+        de Carondelet","office":"government","osm_id":381053952,"ref:whc":2,"building":"yes","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q3288157","wikipedia":"es:Palacio
+        de Carondelet","start_date":1801,"whc:criteria":"ii, iv","opening_hours":"Mo-Su
+        09:00-16:00","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"5123f90f4acea053c059595e4859f420ccbff00102f901006cb6160000000092031550616c6163696f206465204361726f6e64656c6574"},"geometry":{"type":"Point","coordinates":[-78.51259090003855,-0.21975569114214258]}},{"type":"Feature","properties":{"name":"Francisco
+        de Orellana","street":"El Calvario","suburb":"Guápulo","district":"Itchimbia","city":"Quito","county":"Quito
+        Canton","state":"Pichincha","postcode":"170107","country":"Ecuador","country_code":"ec","lon":-78.4754191,"lat":-0.2007119,"formatted":"Francisco
+        de Orellana, El Calvario, 170107, Quito, Ecuador","address_line1":"Francisco
+        de Orellana","address_line2":"El Calvario, 170107, Quito, Ecuador","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Francisco
+        de Orellana","image":"https://commons.wikimedia.org/wiki/File:Francisco_de_Orellana.jpg","osm_id":3224851417,"historic":"memorial","osm_type":"n","wikidata":"Q207901","wikipedia":"en:Francisco
+        de Orellana","inscription":"\"La Republica del Ecuador y la Junta de Extremadura
+        a Francisco de Orellana, Descubridor del Amazonas\" Julio de 1995","wikipedia:de":"Francisco
+        de Orellana","memorial:type":"statue"}},"place_id":"5133993b446d9e53c059a94a2a73edb0c9bff00103f901d95337c0000000009203154672616e636973636f206465204f72656c6c616e61"},"geometry":{"type":"Point","coordinates":[-78.4754191,-0.20071189997959962]}},{"type":"Feature","properties":{"district":"Centro
+        Histórico","county":"Centro Histórico","state":"Pichincha","country":"Ecuador","country_code":"ec","lon":-78.51476935538298,"lat":-0.22746155,"formatted":"Centro
+        Histórico, Ecuador","address_line1":"Centro Histórico","address_line2":"Ecuador","name":"Centro
+        Histórico","categories":["administrative","administrative.suburb_level","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details.heritage","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Centro
+        Histórico","osm_id":-89703,"ref:whc":2,"boundary":"administrative","heritage":1,"historic":"unesco_world_heritage","osm_type":"r","wikidata":"Q8343766","wikipedia":"es:Centro
+        Histórico (parroquia)","admin_level":9,"heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"518c4a060fe4a053c0596731784b91e2ccbff00101f901675e010000000000c0020592031143656e74726f2048697374c3b37269636f"},"geometry":{"type":"Point","coordinates":[-78.51391959776282,-0.22566429314646116]}},{"type":"Feature","properties":{"name":"Casa
+        de Sucre","street":"Venezuela","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.51317405526353,"lat":-0.22188815,"formatted":"Sucre
+        House, Venezuela, 17041, Quito, Ecuador","address_line1":"Sucre House","address_line2":"Venezuela,
+        17041, Quito, Ecuador","categories":["entertainment","entertainment.museum","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Casa
+        de Sucre","osm_id":31149837,"name:en":"Sucre House","tourism":"museum","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q18416972","wikipedia":"es:Museo
+        Casa de Sucre","start_date":1714,"whc:criteria":"(ii),(iv)","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"51f3b722f9d7a053c0592b2199440b67ccbff00102f9010d4fdb010000000092030d43617361206465205375637265"},"geometry":{"type":"Point","coordinates":[-78.51318195715412,-0.22189465379256865]}},{"type":"Feature","properties":{"name":"Ministerio
+        de Defensa","old_name":"Palacio de La Recoleta","street":"La exposicion","suburb":"La
+        Recoleta","district":"Centro Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170602","country":"Ecuador","country_code":"ec","lon":-78.51214272494042,"lat":-0.23096695,"formatted":"Ministerio
+        de Defensa, La exposicion, 170602, Quito, Ecuador","address_line1":"Ministerio
+        de Defensa","address_line2":"La exposicion, 170602, Quito, Ecuador","categories":["building","building.historic","building.office","heritage","heritage.unesco","office","office.government","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Ministerio
+        de Defensa","office":"government","osm_id":31150860,"building":"yes","heritage":1,"historic":"heritage","old_name":"Palacio
+        de La Recoleta","osm_type":"w","wikidata":"Q6058076","addr:city":"Quito","start_date":1908,"addr:street":"La
+        exposicion","whc:criteria":"(ii),(iv)","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"516dac5af2c6a053c0591aea24c25390cdbff00102f9010c53db01000000009203154d696e6973746572696f20646520446566656e7361"},"geometry":{"type":"Point","coordinates":[-78.51214274267996,-0.23096701602646946]}},{"type":"Feature","properties":{"name":"Iglesia
+        de San Francisco","street":"Plaza San Francisco","suburb":"San Roque","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","country":"Ecuador","country_code":"ec","lon":-78.51552690291331,"lat":-0.22028540000000002,"formatted":"Iglesia
+        de San Francisco, Plaza San Francisco, Quito, Ecuador","address_line1":"Iglesia
+        de San Francisco","address_line2":"Plaza San Francisco, Quito, Ecuador","categories":["building","building.historic","building.place_of_worship","heritage","heritage.unesco","tourism","tourism.sights","tourism.sights.place_of_worship.church"],"details":["details.building","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Iglesia
+        de San Francisco","layer":1,"osm_id":159408371,"building":"church","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q5116751","wikipedia":"es:Iglesia
+        de San Francisco (Quito)","start_date":1550,"denomination":"catholic","whc:criteria":"(ii),(iv)","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"510d36407ffda053c059a4aeda271133ccbff00102f901f36080090000000092031849676c657369612064652053616e204672616e636973636f"},"geometry":{"type":"Point","coordinates":[-78.51547223349208,-0.22030844160086815]}},{"type":"Feature","properties":{"name":"La
+        Iglesia de El Sagrario","street":"García Moreno","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.51273400163274,"lat":-0.22063270000000001,"formatted":"La
+        Iglesia de El Sagrario, García Moreno, 17041, Quito, Ecuador","address_line1":"La
+        Iglesia de El Sagrario","address_line2":"García Moreno, 17041, Quito, Ecuador","categories":["building","building.historic","building.place_of_worship","heritage","heritage.unesco","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.church"],"details":["details.building","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"La
+        Iglesia de El Sagrario","osm_id":159408376,"amenity":"place_of_worship","ref:whc":2,"building":"church","heritage":1,"historic":"heritage","osm_type":"w","religion":"christian","wikidata":"Q6446453","wikipedia":"en:Iglesia
+        de El Sagrario, Quito","start_date":1617,"denomination":"catholic","whc:criteria":"ii,
+        iv","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"51b45716b1d0a053c0594dcd9d2c9a3dccbff00102f901f8608009000000009203194c612049676c6573696120646520456c20536167726172696f"},"geometry":{"type":"Point","coordinates":[-78.51273753339666,-0.22062995127235255]}},{"type":"Feature","properties":{"name":"Catedral
+        Metropolitana Quito","street":"García Moreno","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.51244026694886,"lat":-0.22052345,"formatted":"Catedral
+        Metropolitana Quito, García Moreno, 17041, Quito, Ecuador","address_line1":"Catedral
+        Metropolitana Quito","address_line2":"García Moreno, 17041, Quito, Ecuador","categories":["building","building.historic","building.place_of_worship","heritage","heritage.unesco","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.cathedral"],"details":["details.building","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Catedral
+        Metropolitana Quito","layer":1,"osm_id":253234080,"amenity":"place_of_worship","ref:whc":2,"building":"cathedral","heritage":1,"historic":"heritage","osm_type":"w","religion":"christian","wikidata":"Q5758380","start_date":1562,"whc:criteria":"ii,
+        iv","heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"519570fd45cca053c05954044ac05b39ccbff00102f901a00b180f0000000092031c436174656472616c204d6574726f706f6c6974616e6120517569746f"},"geometry":{"type":"Point","coordinates":[-78.51246785879114,-0.22050043954007725]}},{"type":"Feature","properties":{"name":"Busto
+        a Alexander Sabes Petion","street":"Gradas cortas","suburb":"San Juan","district":"San
+        Juan","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170402","country":"Ecuador","country_code":"ec","lon":-78.50683605514286,"lat":-0.21214615,"formatted":"Busto
+        a Alexander Sabes Petion, Gradas cortas, 170402, Quito, Ecuador","address_line1":"Busto
+        a Alexander Sabes Petion","address_line2":"Gradas cortas, 170402, Quito, Ecuador","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Busto
+        a Alexander Sabes Petion","osm_id":366053979,"historic":"memorial","memorial":"bust","osm_type":"w","wikipedia":"es:Alexandre
+        Pétion","inscription":"Alexander Sabes Petion 1770-1818 \"Padre del Panamericanismo\""}},"place_id":"511635810070a053c059ae8680259b27cbbff00102f9015b8ad1150000000092031e427573746f206120416c6578616e64657220536162657320506574696f6e"},"geometry":{"type":"Point","coordinates":[-78.50683605783374,-0.2121461804500106]}},{"type":"Feature","properties":{"name":"Palacio
+        Arzobispal","street":"Chile","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170401","country":"Ecuador","country_code":"ec","lon":-78.51159592169378,"lat":-0.21965384999999998,"formatted":"Palacio
+        Arzobispal, Chile, 170401, Quito, Ecuador","address_line1":"Palacio Arzobispal","address_line2":"Chile,
+        170401, Quito, Ecuador","categories":["building","building.commercial","building.historic","commercial","commercial.shopping_mall","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palacio
+        Arzobispal","shop":"mall","osm_id":424993603,"name:en":"Palacio Arzobispal","ref:whc":2,"building":"yes","heritage":1,"historic":"heritage","osm_type":"w","wikidata":"Q6057565","wikipedia":"es:Palacio
+        arzobispal de Quito","start_date":1775,"addr:street":"Chile","whc:criteria":"ii,
+        iv","addr:postcode":170401,"building:levels":2,"heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"51b06e8630bda053c059b4ae1b688a1cccbff00102f90143e354190000000092031250616c6163696f2041727a6f62697370616c"},"geometry":{"type":"Point","coordinates":[-78.51154721382295,-0.21962099154858594]}},{"type":"Feature","properties":{"name":"La
+        Gangotena","old_name":"Palacio Gangotena","street":"Cuenca","suburb":"San
+        Roque","district":"Centro Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170405","country":"Ecuador","country_code":"ec","lon":-78.51541272280701,"lat":-0.22112199999999999,"formatted":"La
+        Gangotena, Cuenca, 170405, Quito, Ecuador","address_line1":"La Gangotena","address_line2":"Cuenca,
+        170405, Quito, Ecuador","categories":["building","building.accommodation","building.historic","heritage","heritage.unesco","tourism","tourism.sights"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"La
+        Gangotena","osm_id":425584867,"building":"hotel","heritage":1,"historic":"heritage","old_name":"Palacio
+        Gangotena","osm_type":"w","wikidata":"Q19950445","start_date":1880,"whc:criteria":"(ii),(iv)","building:levels":2,"heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"516bb33caefca053c059847a91a57450ccbff00102f901e3e85d190000000092030c4c612047616e676f74656e61"},"geometry":{"type":"Point","coordinates":[-78.51542240073984,-0.22120531162632429]}},{"type":"Feature","properties":{"name":"Iglesia
+        de Santo Domingo","street":"Plaza Santo Domingo","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","country":"Ecuador","country_code":"ec","lon":-78.51245867880928,"lat":-0.2243117,"formatted":"Iglesia
+        de Santo Domingo, Plaza Santo Domingo, Quito, Ecuador","address_line1":"Iglesia
+        de Santo Domingo","address_line2":"Plaza Santo Domingo, Quito, Ecuador","categories":["building","building.historic","building.place_of_worship","heritage","heritage.unesco","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.church"],"details":["details.building","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Iglesia
+        de Santo Domingo","height":55.83,"osm_id":673325435,"amenity":"place_of_worship","building":"church","heritage":1,"historic":"heritage","osm_type":"w","religion":"christian","wikidata":"Q6447145","roof:shape":"gabled","start_date":1540,"roof:colour":"peru","roof:height":73.99,"whc:criteria":"(ii),(iv)","building:levels":2,"heritage:operator":"whc","whc:inscription_date":1978}},"place_id":"51b8432770cda053c059c6fa548431b5ccbff00102f9017b2122280000000092031849676c657369612064652053616e746f20446f6d696e676f"},"geometry":{"type":"Point","coordinates":[-78.51253894648005,-0.22427958451767988]}},{"type":"Feature","properties":{"name":"Batalla
+        de Pichincha","street":"11 de Octubre","suburb":"Nueva Aurora Alta","hamlet":"La
+        Libertad","district":"La Libertad","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"170405","country":"Ecuador","country_code":"ec","lon":-78.5275496,"lat":-0.2187143,"formatted":"Batalla
+        de Pichincha, 11 de Octubre, 170405, Quito, Ecuador","address_line1":"Batalla
+        de Pichincha","address_line2":"11 de Octubre, 170405, Quito, Ecuador","categories":["tourism","tourism.sights","tourism.sights.battlefield"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Batalla
+        de Pichincha","osm_id":2137276238,"historic":"battlefield","osm_type":"n","wikidata":"Q1402751","wikipedia":"es:Batalla
+        de Pichincha"}},"place_id":"5125c1655fc3a153c0590a3bc986d4fecbbff00103f9014e3f647f00000000920314426174616c6c612064652050696368696e636861"},"geometry":{"type":"Point","coordinates":[-78.5275496,-0.21871429997778363]}},{"type":"Feature","properties":{"name":"Monumento
+        a la Independencia","street":"Espejo","suburb":"Gonzalez Suarez","district":"Centro
+        Histórico","city":"Quito","county":"Quito Canton","state":"Pichincha","postcode":"17041","country":"Ecuador","country_code":"ec","lon":-78.512128,"lat":-0.2200933,"formatted":"Monumento
+        a la Independencia, Espejo, 17041, Quito, Ecuador","address_line1":"Monumento
+        a la Independencia","address_line2":"Espejo, 17041, Quito, Ecuador","categories":["tourism","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        a la Independencia","osm_id":4092745994,"name:es":"Monumento a la Independencia","historic":"monument","osm_type":"n","wikidata":"Q6023134"}},"place_id":"516ad784b4c6a053c0599a80bc6a042cccbff00103f9010a59f2f30000000092031c4d6f6e756d656e746f2061206c6120496e646570656e64656e636961"},"geometry":{"type":"Point","coordinates":[-78.51212799999999,-0.22009329997763843]}},{"type":"Feature","properties":{"name":"Chamizal","street":"Alberto
+        Enriquez Gallo","quarter":"La Luz Alta","suburb":"Conocoto","city":"Conocoto","county":"Quito
+        Canton","state":"Pichincha","postcode":"CONOCOTO","country":"Ecuador","country_code":"ec","lon":-78.4993193,"lat":-0.2861348,"formatted":"Chamizal,
+        Alberto Enriquez Gallo, CONOCOTO, Conocoto, Ecuador","address_line1":"Chamizal","address_line2":"Alberto
+        Enriquez Gallo, CONOCOTO, Conocoto, Ecuador","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Chamizal","image":"https://img10.naventcdn.com/avisos/9/00/56/28/13/65/1200x1200/128357241.jpg","osm_id":8455439585,"historic":"memorial","osm_type":"n"}},"place_id":"51bef0efd8f49f53c05969df07560850d2bff00103f901e1c4fbf7010000009203084368616d697a616c"},"geometry":{"type":"Point","coordinates":[-78.4993193,-0.28613479997101493]}}]}'
+  recorded_at: Mon, 14 Nov 2022 18:11:24 GMT
+recorded_with: VCR 6.1.0
