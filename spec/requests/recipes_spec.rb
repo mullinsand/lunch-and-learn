@@ -51,11 +51,9 @@ RSpec.describe 'GET /api/v1/recipes' do
         it 'returns a data key with an empty array as its value' do
           country = 'Uranus'
           allow_any_instance_of(ApplicationController).to receive(:country_exists?).and_return(true)
-          # VCR.use_cassette('all_countries') do
-            VCR.use_cassette('No_Recipe_search_Uranus') do
-              get "/api/v1/recipes?country=#{country}"
-            end
-          # end
+          VCR.use_cassette('No_Recipe_search_Uranus') do
+            get "/api/v1/recipes?country=#{country}"
+          end
           @recipes_list = json
           expect(@recipes_list[:data]).to eq([])
         end

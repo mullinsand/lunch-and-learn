@@ -25,7 +25,7 @@ class Api::V1::FavoritesController < ApplicationController
 
     favorite = user.favorites.find_by(id: favorite_id_param[:favorite_id])
     raise ActiveRecord::RecordNotFound.new, 'Incorrect favorite id used' if favorite.nil?
-    
+
     favorite.destroy
     render json: { success: 'Favorite successfully deleted' }
   end
