@@ -10,7 +10,6 @@ class Api::V1::FavoritesController < ApplicationController
         favorite.save
         render json: { success: 'Favorite added successfully' }, status: 201
       end
-      
     else
       invalid_api_key
     end

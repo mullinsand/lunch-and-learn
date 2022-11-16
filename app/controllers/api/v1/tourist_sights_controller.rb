@@ -15,10 +15,4 @@ class Api::V1::TouristSightsController < ApplicationController
     end
     tourist_sights == [] ? (render json: { data: [] }) : (render json: TouristSightSerializer.new(tourist_sights))
   end
-
-  private
-
-  def country_exists?
-    RestCountriesFacade.all_countries_names.include?(params[:country].downcase)
-  end
 end

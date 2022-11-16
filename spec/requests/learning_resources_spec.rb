@@ -6,9 +6,11 @@ RSpec.describe 'GET /api/v1/learning_resources' do
       context 'there results for both image and video' do
         before :each do
           @country = 'germany'
-          VCR.use_cassette('germany_unsplash_image_search') do
-            VCR.use_cassette('germany_youtube_video_search') do
-              get "/api/v1/learning_resources?country=#{@country}"
+          VCR.use_cassette('all_countries') do
+            VCR.use_cassette('germany_unsplash_image_search') do
+              VCR.use_cassette('germany_youtube_video_search') do
+                get "/api/v1/learning_resources?country=#{@country}"
+              end
             end
           end
           @learning_recource = json

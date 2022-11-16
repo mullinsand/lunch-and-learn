@@ -6,7 +6,9 @@ class RestCountriesFacade
   end
 
   def self.all_countries
-    RestCountriesService.all_countries
+    Rails.cache.fetch("my_cache_key/all_countries", expires_in: 24.hours) do
+      RestCountriesService.all_countries
+    end
   end
 
   def self.all_countries_names
