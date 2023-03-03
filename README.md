@@ -196,6 +196,39 @@ Accept: application/json
 
 ___
 
+### POST /api/v1/user
+- Login endpoint
+- User information requested through the body as a JSON payload
+- Password and email required
+- Response contains name, email, and api_key
+- Request format:
+```
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "athenadao@bestgirlever.com",
+  "password": "123456"
+}
+```
+
+- Successful response format:
+```
+{
+  "data": {
+    "type": "user",
+    "id": "1",
+    "attributes": {
+      "name": "Athena Dao",
+      "email": "athenadao@bestgirlever.com",
+      "api_key": "jgn983hy48thw9begh98h4539h4"
+    }
+  }
+}
+```
+
+___
+
 ### POST /api/v1/favorites
 - Add a recipe to a user's favorite recipes list
 - Stores the country, recipe link, and recipe title as a favorite
