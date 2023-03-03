@@ -1,8 +1,10 @@
 class EdamamFacade
   def self.recipes_by(country)
-    recipe_json = EdamamService.recipes_by(country)[:hits]
-    recipe_json.take(10).map do |recipe|
-      Recipe.new(recipe[:recipe], country)
+    Rails.cache.fetch("my_cache_key/recipes/#{country}", expires_in: 24.hours) do
+      recipes_json = EdamamService.recipes_by(country)[:hits]
+      recipes_json.take(10).map do |recipe|
+        Recipe.new(recipe[:recipe], country)
+      end
     end
   end
 end

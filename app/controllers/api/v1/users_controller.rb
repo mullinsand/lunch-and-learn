@@ -8,6 +8,10 @@ class Api::V1::UsersController < ApplicationController
     render json: UserSerializer.new(user), status: 201 if user.save!
   end
 
+  def show
+    # user = User.find
+  end
+
   private
   
   def user_params
