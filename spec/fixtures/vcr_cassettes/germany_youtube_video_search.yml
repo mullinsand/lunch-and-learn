@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 12 Nov 2022 20:04:06 GMT
+      - Wed, 22 Feb 2023 03:44:07 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -37,8 +37,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
-        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
       Transfer-Encoding:
       - chunked
     body:
@@ -46,11 +45,11 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "CZbkDws4PyhMQtnZ5kJBTkqSq1A",
+          "etag": "u7ya6ilEYN6OQkJsWnzw80swlq4",
           "nextPageToken": "CAUQAA",
           "regionCode": "US",
           "pageInfo": {
-            "totalResults": 63,
+            "totalResults": 70,
             "resultsPerPage": 5
           },
           "items": [
@@ -124,36 +123,30 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "fopco4RD_xDvn8w95sRH5I3dxSQ",
+              "etag": "dWZc5XJ238v52lQf_dh6lJM05oY",
               "id": {
-                "kind": "youtube#playlist",
-                "playlistId": "PLVRhJQ5GttaJJo5HY1JcEVihUpSV6fz5o"
+                "kind": "youtube#channel",
+                "channelId": "UCluQ5yInbeAkkeCndNnUhpw"
               },
               "snippet": {
-                "publishedAt": "2019-08-02T20:36:34Z",
+                "publishedAt": "2017-05-14T04:40:16Z",
                 "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
-                "title": "Super Quick Histories!",
-                "description": "",
+                "title": "Mr History",
+                "description": "Hi there, welcome to Mr History! On this channel I'd like to answer the common and uncommon questions people have about ...",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/default.jpg",
-                    "width": 120,
-                    "height": 90
+                    "url": "https://yt3.ggpht.com/ytc/AL5GRJWU6xPokGS_dswZQpzGMUi08S8Jq2h_HYueYvUuLg=s88-c-k-c0xffffffff-no-rj-mo"
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
+                    "url": "https://yt3.ggpht.com/ytc/AL5GRJWU6xPokGS_dswZQpzGMUi08S8Jq2h_HYueYvUuLg=s240-c-k-c0xffffffff-no-rj-mo"
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
+                    "url": "https://yt3.ggpht.com/ytc/AL5GRJWU6xPokGS_dswZQpzGMUi08S8Jq2h_HYueYvUuLg=s800-c-k-c0xffffffff-no-rj-mo"
                   }
                 },
                 "channelTitle": "Mr History",
                 "liveBroadcastContent": "none",
-                "publishTime": "2019-08-02T20:36:34Z"
+                "publishTime": "2017-05-14T04:40:16Z"
               }
             },
             {
@@ -192,39 +185,39 @@ http_interactions:
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "E8WatDr915ExCtT-4M1bkhTwNrs",
+              "etag": "uvKt-25VGtxPFpVzA3x9dXHHwYo",
               "id": {
-                "kind": "youtube#video",
-                "videoId": "S1zCJGpE8QI"
+                "kind": "youtube#playlist",
+                "playlistId": "PLVRhJQ5GttaJJo5HY1JcEVihUpSV6fz5o"
               },
               "snippet": {
-                "publishedAt": "2021-09-09T06:53:45Z",
+                "publishedAt": "2019-08-02T20:36:34Z",
                 "channelId": "UCluQ5yInbeAkkeCndNnUhpw",
-                "title": "A Super Quick History of Latvia",
-                "description": "Audio Requiring Attribution: MaryAnn Daly: https://commons.wikimedia.org/wiki/File:Sudrabavots_singing.webm Pictures ...",
+                "title": "Super Quick Histories!",
+                "description": "",
                 "thumbnails": {
                   "default": {
-                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/default.jpg",
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/default.jpg",
                     "width": 120,
                     "height": 90
                   },
                   "medium": {
-                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/mqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/mqdefault.jpg",
                     "width": 320,
                     "height": 180
                   },
                   "high": {
-                    "url": "https://i.ytimg.com/vi/S1zCJGpE8QI/hqdefault.jpg",
+                    "url": "https://i.ytimg.com/vi/MfGoJrqh0Gk/hqdefault.jpg",
                     "width": 480,
                     "height": 360
                   }
                 },
                 "channelTitle": "Mr History",
                 "liveBroadcastContent": "none",
-                "publishTime": "2021-09-09T06:53:45Z"
+                "publishTime": "2019-08-02T20:36:34Z"
               }
             }
           ]
         }
-  recorded_at: Sat, 12 Nov 2022 20:04:06 GMT
+  recorded_at: Wed, 22 Feb 2023 03:44:07 GMT
 recorded_with: VCR 6.1.0

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :recipes, only: [:index]
       resource :learning_resources, only: [:show]
-      resources :users, only: [:create]
+      resources :users, only: %i[create]
+      resource :user, only: %i[create], to: 'users#show'
       resource :favorites, only: %i[create destroy]
       resources :favorites, only: [:index]
       resources :tourist_sights, only: [:index]
