@@ -118,7 +118,7 @@ RSpec.describe 'POST /api/v1/users' do
 
         post '/api/v1/user', headers: @request_headers, params: @login_request_body.to_json
         
-        expect(response.status).to eq(401)
+        expect(response.status).to eq(404)
         @user_response = json
         expect(@user_response[:errors]).to eq("Couldn't find User")
       end
